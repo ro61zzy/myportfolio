@@ -16,8 +16,18 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
 
+import './appbar.css'
+
+
+
+import Twitter from '../../assets/twitter.png'
+import Skype from '../../assets/skype.png'
+import IG from '../../assets/ig.png'
+import LinkedIn from '../../assets/linkedin.png'
+
+
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Home", "Skills", "project"];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -49,9 +59,9 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex"}}>
+    <Box sx={{ display: "flex", }} >
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar elevation={0} component="nav"  sx={{backgroundColor:'#fff', color:'#000', mt:'27px'}}>
         <Container maxWidth="xl">
           {" "}
           <Toolbar>
@@ -65,22 +75,30 @@ function DrawerAppBar(props) {
               <MenuIcon />
             </IconButton>
             
-            <Box sx={{ flex: .5 }}>
+            <Box sx={{ flex: .25}}>
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ display: { xs: "none", sm: "block" } }}
+                sx={{ display: { xs: "none", sm: "block" }, fontSize:'40px', fontWeight:500, fontFamily:'Lexend' }}
               >
-                MUI
+                Logo
               </Typography>
             </Box>
 
-            <Box sx={{ justifyContent:"space-evenly", display: { xs: "none", sm: "block" } }}>
+            <Box sx={{ justifyContent:"space-evenly", flex:.3, display: { xs: "none", sm: "flex" }, justifyContent:'space-between'}}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#fff" }}>
+                <Button key={item} sx={{ color: "#000", fontFamily:'Lexend', fontWeight:400, fontSize:'20px', textTransform:'capitalize' }}>
                   {item}
                 </Button>
               ))}
+            </Box>
+
+            <Box sx={{ justifyContent:"space-evenly",  flex:.45, display: { xs: "none", sm: "flex" }, }}>
+              <img src={Twitter} alt="twitter"/>
+              <img src={Skype} alt="skype"/>
+              <img src={IG} alt="insta"/>
+              <img src={LinkedIn} alt="linkedin"/>
+              <Button sx={{backgroundColor:'#D9D9D9',height:'60px', color:'#000', borderRadius:'11px',alignSelf:'center', fontFamily:'Lexend', fontWeight:400, fontSize:'18px', p:"18px 21px", textTransform:"capitalize"}}> Let's Connect</Button>
             </Box>
            
           </Toolbar>
