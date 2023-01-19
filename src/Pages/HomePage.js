@@ -1,12 +1,14 @@
 import React from 'react'
 import DrawerAppBar from '../components/Appbar/DrawerAppBar'
+import Home from '../components/Hero/Home'
 
 
 function HomePage() {
   return (
-    <div>
+    <>
         <DrawerAppBar />
-    </div>
+        <Home />
+    </>
   )
 }
 

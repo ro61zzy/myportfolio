@@ -21,8 +21,8 @@ import './appbar.css'
 
 
 import Twitter from '../../assets/twitter.png'
-import Skype from '../../assets/skype.png'
-import IG from '../../assets/ig.png'
+import whatsapp from '../../assets/whatsapp.png'
+import IG from '../../assets/github.png'
 import LinkedIn from '../../assets/linkedin.png'
 
 
@@ -95,7 +95,7 @@ function DrawerAppBar(props) {
 
             <Box sx={{ justifyContent:"space-evenly",  flex:.45, display: { xs: "none", sm: "flex" }, }}>
               <img src={Twitter} alt="twitter"/>
-              <img src={Skype} alt="skype"/>
+              <img src={whatsapp} alt="skype"/>
               <img src={IG} alt="insta"/>
               <img src={LinkedIn} alt="linkedin"/>
               <Button sx={{backgroundColor:'#D9D9D9',height:'60px', color:'#000', borderRadius:'11px',alignSelf:'center', fontFamily:'Lexend', fontWeight:400, fontSize:'18px', p:"18px 21px", textTransform:"capitalize"}}> Let's Connect</Button>
