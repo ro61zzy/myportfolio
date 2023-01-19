@@ -1,15 +1,16 @@
-import React from 'react'
-import DrawerAppBar from '../components/Appbar/DrawerAppBar'
-import Home from '../components/Hero/Home'
-
+import React from "react";
+import DrawerAppBar from "../components/Appbar/DrawerAppBar";
+import About from "../components/AboutMe/About";
+import Home from "../components/Hero/Home";
 
 function HomePage() {
   return (
     <>
-        <DrawerAppBar />
-        <Home />
+      <DrawerAppBar />
+      <Home />
+      <About />
     </>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

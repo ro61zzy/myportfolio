@@ -85,7 +85,7 @@ function DrawerAppBar(props) {
               </Typography>
             </Box>
 
-            <Box sx={{ justifyContent:"space-evenly", flex:.3, display: { xs: "none", sm: "flex" }, justifyContent:'space-between'}}>
+            <Box sx={{ justifyContent:"space-evenly", flex:.3, display: { xs: "none", sm: "flex" }}}>
               {navItems.map((item) => (
                 <Button key={item} sx={{ color: "#000", fontFamily:'Lexend', fontWeight:400, fontSize:'20px', textTransform:'capitalize' }}>
                   {item}
