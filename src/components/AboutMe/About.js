@@ -27,7 +27,7 @@ export default function ColumnsGrid() {
     //   }}
     // >
     <Container maxWidth="xl">
-      <Box sx={{display:"flex", justifyContent:"center", fontSize:"48px", fontWeight:"600", lineHeight:"60px", fontFamily:"Lexend"}}>About me</Box>
+      <Box sx={{display:"flex", justifyContent:"center", fontSize:{ xs: "23px", md: "48px" }, fontWeight:"600", lineHeight:{ xs: "30px", md: "60px" }, fontFamily:"Lexend"}}>About me</Box>
       <Grid container>
         <Grid item xs={5}>
           <Box>
