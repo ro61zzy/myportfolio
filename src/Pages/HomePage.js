@@ -3,6 +3,7 @@ import DrawerAppBar from "../components/Appbar/DrawerAppBar";
 import About from "../components/AboutMe/About";
 import Skills from "../components/Skills/Skills"
 import Home from "../components/Hero/Home";
+import Project from "../components/Projects/Project";
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <Home />
       <About />
       <Skills />
+      <Project />
     </>
   );
 }
