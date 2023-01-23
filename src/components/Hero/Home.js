@@ -22,8 +22,7 @@ function Home() {
                 }}>
                     <Stack>
                         <Typography sx={{ fontFamily: 'Ubuntu', fontWeight: 400, fontSize: {xs:'14px', sm:'24px'}, lineHeight: {xs:'16px', sm:'36px'}, color: '#000000', overflow:'hidden' }}>Welcome my portfolio</Typography>
-                        <Typography sx={{ fontFamily: 'Lexend', fontWeight: 600, fontSize: {xs:'30px', sm:'48px'}, lineHeight: {xs:'30px', sm:'60px'}, color: '#000000', }}>Hi! I’m  web designer
-                            and UI/UX designer</Typography>
+                        <Typography sx={{ fontFamily: 'Lexend', fontWeight: 600, fontSize: {xs:'24px', sm:'48px'}, lineHeight: {xs:'30px', sm:'60px'}, color: '#000000', }}>Hi! I’m a front-end developer and UI/UX developer</Typography>
 
                     </Stack>
                 </Box>

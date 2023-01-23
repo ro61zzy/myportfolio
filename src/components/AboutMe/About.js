@@ -47,7 +47,7 @@ export default function ColumnsGrid() {
           <Box sx={{ pt: "18%" }}>
             <Typography
               sx={{
-                width: { xs: "200px", md: "45vw" },
+                width: { xs: "200px", md: "100%" },
                 lineHeight: { xs: "11px", md: "30px" },
                 fontFamily: "Lexend",
                 fontWeight: 400,
