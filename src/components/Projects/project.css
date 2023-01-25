@@ -1,0 +1,21 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.wrapper div img {
+    object-fit: scale-down;
+    width:100%;
+    align-items:'center'
+}
+.first {
+    background-image: url('../../assets/one.png');
+    /* height: '350px !important'; */
+    background-size: cover;
+    object-fit:contain;
+    position:relative;
+}
+.second {
+    background-image: url('../../assets/two.png');
+    background-size: cover;
+    position: relative;
+}
