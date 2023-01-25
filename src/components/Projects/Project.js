@@ -8,6 +8,7 @@ import Three from '../../assets/three.png'
 import Four from '../../assets/four.png'
 import Five from '../../assets/five.png'
 import Six from '../../assets/six.png'
+import LazyLoad from 'react-lazyload'
 
 
 
@@ -16,27 +17,42 @@ function Project() {
         <Container maxWidth='xl'>
 
             <Box sx={{
-                display: 'flex', justifyContent: 'center', fontFamily: 'Lexend', fontWeight: 600, fontSize: {xs:'14px', sm:'48px'}, lineHeight: '60px', color: '#000000', marginTop: '100px', marginBottom: '50px'
+                display: 'flex', justifyContent: 'center', fontFamily: 'Lexend', fontWeight: 600, fontSize: { xs: '14px', sm: '48px' }, lineHeight: '60px', color: '#000000', marginTop: '100px', marginBottom: '50px'
             }}>Projects</Box>
 
             <Box className="wrapper">
                 <Box>
-                    <img src={One} alt='img' />
+                    <LazyLoad offset={100}>
+                        <img src={One} alt='img' />
+                    </LazyLoad>
                 </Box>
                 <Box>
-                    <img src={Two} alt='img' />
+                    <LazyLoad offset={100}>
+                        <img src={Two} alt='img' />
+                    </LazyLoad>
                 </Box>
                 <Box>
-                    <img src={Three} alt='img' />
+                    <LazyLoad offset={100}>
+                        <img src={Three} alt='img' />
+                    </LazyLoad>
                 </Box>
                 <Box>
-                    <img src={Four} alt ='img' />
+                    <LazyLoad offset={100}>
+
+                        <img src={Four} alt='img' />
+                    </LazyLoad>
                 </Box>
                 <Box>
-                    <img src={Five} alt='img'/>
+                    <LazyLoad offset={100}>
+
+                        <img src={Five} alt='img' />
+                    </LazyLoad>
                 </Box>
                 <Box>
-                    <img src={Six} alt='img' />
+                    <LazyLoad offset={100}>
+
+                        <img src={Six} alt='img' />
+                    </LazyLoad>
                 </Box>
             </Box>
         </Container >

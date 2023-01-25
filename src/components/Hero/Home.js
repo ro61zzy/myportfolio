@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
+import LazyLoad from 'react-lazyload'
 
 import Hero from '../../assets/hero.png'
 import Scroll from '../../assets/scroll.png'
@@ -26,12 +27,17 @@ function Home() {
 
                     </Stack>
                 </Box>
-                <Box sx={{ display: { xs: 'none', sm: 'block' } }}><img src={Hero} alt='hero' /></Box>
+                <Box sx={{ display: { xs: 'none', sm: 'block' },  }}>
+                    <LazyLoad  height={400} offset={100}>
+                    <img src={Hero} alt='hero'/>
+                    </LazyLoad>
+                    </Box>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingLeft: {  sm: '1.8rem' }, paddingRight: {  sm: '1.8rem' } }}>
                 <Box> <Button sx={{ backgroundColor: '#D9D9D9', height: {xs:'18px', sm:'60px'}, color: '#000', borderRadius: '11px', alignSelf: 'center', fontFamily: 'Lexend', fontWeight: 400, fontSize: {xs:'9px', sm:'18px'}, p: "18px 21px", textTransform: "capitalize", top:{xs:'130px', sm:'unset'} }}> Let's Connect</Button>
                 </Box>
-                <Box sx={{ display: { xs: 'block', sm: 'none' } }}><img src={Hero} alt='hero' style={{height:'200px'}}/></Box>
+                <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+                    <LazyLoad height={200} offset={100}><img src={Hero} alt='hero' style={{height:'200px'}}/></LazyLoad></Box>
             </Box>
             <Box sx={{display:'flex', justifyContent:'center'}}>
                 <img src={Scroll} alt='scroll' style={{height:{xs:'80px', sm:'114px'}}}/>

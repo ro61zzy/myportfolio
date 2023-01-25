@@ -6,6 +6,9 @@ import Typography from "@mui/material/Typography";
 import him from "../../assets/him.png";
 import dwnd from "../../assets/dwnd.png";
 import { Button, Container } from "@mui/material";
+import LazyLoad from "react-lazyload";
+
+
 
 const Img = styled("img")({
   margin: "auto",
@@ -31,6 +34,7 @@ export default function ColumnsGrid() {
       <Grid container>
         <Grid item xs={5}>
           <Box>
+            <LazyLoad height={140} offset={100}>
             <Img
               src={him}
               alt="him"
@@ -41,6 +45,7 @@ export default function ColumnsGrid() {
                 height: { xs: 140, sm: 450 },
               }}
             />
+            </LazyLoad>
           </Box>
         </Grid>
         <Grid item xs={6}>
