@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Container, Grid } from '@mui/material'
 import './project.css'
 
-import One from '../../assets/one.png'
+import One from '../../assets/techis.png'
 import Two from '../../assets/two.png'
 import Three from '../../assets/three.png'
 import Four from '../../assets/four.png'

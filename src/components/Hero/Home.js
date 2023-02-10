@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
 import LazyLoad from 'react-lazyload'
 
-import Hero from '../../assets/hero.png'
+import Hero from '../../assets/hero3.png'
 import Scroll from '../../assets/scroll.png'
 import './home.css'
 let style = {

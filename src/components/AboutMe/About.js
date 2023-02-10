@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import him from "../../assets/him.png";
+import him from "../../assets/mee1.png";
 import dwnd from "../../assets/dwnd.png";
 import { Button, Container } from "@mui/material";
 import LazyLoad from "react-lazyload";
@@ -60,11 +60,7 @@ export default function ColumnsGrid() {
                 fontSize: { xs: "10px", sm: "22px" },
               }}
             >
-              Hi! I am Ankit yadav, a web designer/developer focused on crafting
-              great web experiences. Designing and Coding have been my passion
-              since the days I started working with computers but I found myself
-              into lorem ipsum since 2007. I enjoy creating beautifully
-              designed, intuitive and functional websites.
+              Hi, I am Rose Wachuka, a dedicated and experienced Front-End Developer. With hands-on experience in HTML, CSS, and JavaScript, I have a strong background in developing responsive and dynamic websites. I am driven by a passion for creating visually appealing and user-friendly web experiences and always stay up-to-date with the latest web development trends to deliver exceptional results for my clients.
             </Typography>
             <Button
               sx={{
