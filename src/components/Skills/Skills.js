@@ -17,7 +17,7 @@ export default function BoxSx() {
           },
         }}
       >
-        <Box sx={{display:"flex", justifyContent:"center", fontSize:{ xs: "23px", md: "48px" }, fontWeight:"600", lineHeight:{ xs: "30px", md: "60px" }, fontFamily:"Lexend", pt:{ xs: "25px", md: "91px" } }}>Skills</Box>
+        <Box sx={{display:"flex", justifyContent:"center", fontSize:{ xs: "23px", md: "48px" }, fontWeight:"600", lineHeight:{ xs: "30px", md: "60px" }, fontFamily:"Lexend", pt:{ xs: "20px", md: "35px" } }}>Skills</Box>
         <Box sx={{display:"flex", justifyContent:"space-around", mt: { xs: "21px", md: "25px" }}}>
           <Box>
             <Typography sx={{mb:"20px", fontSize:{ xs: "15px", md: "30px" }}}>JavaScript</Typography>
@@ -28,8 +28,8 @@ export default function BoxSx() {
           <Box>
           <Typography sx={{mb:"20px", fontSize:{ xs: "15px", md: "30px" }}}>Material-UI</Typography>
           <Typography sx={{mb:"20px", fontSize:{ xs: "15px", md: "30px" }}}>Bootstrap</Typography>
-          <Typography sx={{mb:"20px", fontSize:{ xs: "15px", md: "30px" }}}>Reactjs</Typography>
-          <Typography sx={{mb:"20px", fontSize:{ xs: "15px", md: "30px" }}}>CSS</Typography>          
+          <Typography sx={{mb:"20px", fontSize:{ xs: "15px", md: "30px" }}}>Nodejs</Typography>
+          <Typography sx={{mb:"20px", fontSize:{ xs: "15px", md: "30px" }}}>Git</Typography>          
           </Box>
         </Box>
       </Box>
