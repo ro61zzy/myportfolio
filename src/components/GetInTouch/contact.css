@@ -1,3 +1,6 @@
 .textfield {
     border-radius: 28px,
 }
+.MuiOutlinedInput-notchedOutline {
+  border-color:linear-gradient(45deg, #2e01f8, #40c239);
+}

@@ -16,7 +16,7 @@ function HomePage() {
       <About />
       <Skills />
       <Project />
-      <Services />
+      {/* <Services /> */}
       <Index />
     </>
   );
