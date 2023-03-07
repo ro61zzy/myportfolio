@@ -1,20 +1,20 @@
 import React from "react";
 import { Box, Button, Container, Grid, Stack, TextField } from "@mui/material";
-import Rectangle from "../../assets/Rectangle.png";
+import Rectangle from "../../assets/images.jpeg";
 import "./contact.css";
 import TextInput from "../textfield/textfield";
 
 function Index() {
   return (
-    <Container maxWidth="lg" sx={{ pt: "60px", pb: "40px" }}>
+    <Container sx={{ pt: "60px", pb: "40px" }}>
       <Grid container>
-        <Grid item xs={7} sm={6}>
-          <Box sx={{ display: { xs: 'block', sm: 'none' } }} >
+        <Grid item xs={7} sm={4}>
+          <Box >
             <img src={Rectangle} alt='image' />
           </Box>
         </Grid>
-        <Grid item xs={5} sm={6}>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid item xs={5} sm={8}>
+          <Box sx={{ display: "flex", justifyContent: "center"}}>
             <Stack spacing={2}>
               {/* <TextField
                 sx={{
