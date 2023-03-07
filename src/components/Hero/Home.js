@@ -20,11 +20,11 @@ function Home() {
                     position: 'relative',
                     // width: '283px',
                     height: '46px',
-                    top: { xs: 'unset', sm: '420px' }
+                    top: { xs: 'unset', sm: '350px' }
                 }}>
                     <Stack>
-                        <Typography sx={{ fontFamily: 'Ubuntu', fontWeight: 400, fontSize: { xs: '14px', sm: '24px' }, lineHeight: { xs: '16px', sm: '36px' }, color: '#000000', overflow: 'hidden' }}>Welcome my portfolio</Typography>
-                        <Typography sx={{ fontFamily: 'Lexend', fontWeight: { xs: 400, sm: 600 }, fontSize: { xs: '24px', sm: '48px' }, lineHeight: { xs: '30px', sm: '60px' }, color: '#000000', }}>Hi! I’m a front-end developer and UI/UX developer</Typography>
+                        <Typography sx={{ fontFamily: 'Ubuntu', fontWeight: 400, fontSize: { xs: '14px', sm: '24px' }, lineHeight: { xs: '18px', sm: '36px' }, color: '#000000', overflow: 'hidden' }}>Welcome to my portfolio</Typography>
+                        <Typography sx={{ fontFamily: 'Lexend', fontWeight: { xs: 400, sm: 600 }, fontSize: { xs: '30px', sm: '50px' }, lineHeight: { xs: '33px', sm: '60px' }, color: '#000000', }}>Hi! I’m a front-end developer and UI/UX developer</Typography>
 
                     </Stack>
                 </Box>
@@ -35,7 +35,7 @@ function Home() {
                 </Box>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingLeft: { sm: '1.8rem' }, paddingRight: { sm: '1.8rem' } }}>
-                <Box> <Button sx={{ backgroundColor: '#D9D9D9', height: { xs: '18px', sm: '60px' }, color: '#000', borderRadius: '11px', alignSelf: 'center', fontFamily: 'Lexend', fontWeight: 400, fontSize: { xs: '9px', sm: '18px' }, p: "18px 21px", textTransform: "capitalize", top: { xs: '130px', sm: 'unset' } }}> Let's Connect</Button>
+                <Box> <Button href='#connect' sx={{ backgroundColor: '#fff', height: { xs: '18px', sm: '60px' }, color: '#000', borderRadius: '11px', alignSelf: 'center', fontFamily: 'Lexend', fontWeight: 400, fontSize: { xs: '9px', sm: '18px' }, p: "18px 21px", textTransform: "capitalize", top: { xs: '130px', sm: 'unset' } }}> </Button>
                 </Box>
                 <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
                     <LazyLoad height={200} offset={100}><img fetchpriority="high" src={Hero} alt='hero' style={{ height: '200px' }} /></LazyLoad></Box>

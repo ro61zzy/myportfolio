@@ -31,14 +31,24 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", height:"100vh"}}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", height: "100vh" }}
+    >
       <Typography variant="h6">
         <img src={Logo} alt="logo" height="80px" />
       </Typography>
       <Divider />
 
       <Box
-        sx={{ display: "flex", flexDirection: "column",gap:"50px", textAlign: "center", height:"100vh !important"}}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "50px",
+          height: "80%",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <Link href="#home" variant="body2" style={{ textDecoration: "none" }}>
           <Button
@@ -85,15 +95,15 @@ function DrawerAppBar(props) {
         </Link>
 
         <Box
+          id="connect"
           sx={{
             justifyContent: "space-evenly",
             flex: 0.3,
             display: "flex",
+            gap: "18px",
             height: "100%",
-            // mt:"66vh",
-            
-            p:"10px"
-           
+
+            p: "10px",
           }}
         >
           <a href="https://twitter.com/rosewachukak?s=21&t=744hFtUA20Cl0Ho8d2-aag">
@@ -110,8 +120,6 @@ function DrawerAppBar(props) {
           </a>
         </Box>
       </Box>
-
-     
     </Box>
   );
 
@@ -252,6 +260,7 @@ function DrawerAppBar(props) {
             </Box> */}
 
             <Box
+              id="connect"
               sx={{
                 justifyContent: "space-evenly",
                 flex: 0.45,

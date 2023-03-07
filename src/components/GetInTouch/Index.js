@@ -6,7 +6,7 @@ import TextInput from "../textfield/textfield";
 
 function Index() {
   return (
-    <Container sx={{ pt: "60px", pb: "40px" }}>
+    <Container sx={{ pt: "40px", pb: "40px" }}>
       <Grid container>
         <Grid item xs={7} sm={4}>
           <Box >

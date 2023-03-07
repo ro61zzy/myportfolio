@@ -17,7 +17,7 @@ function Project() {
         <Container id="projects" maxWidth='xl'>
 
             <Box sx={{
-                display: 'flex', justifyContent: 'center', fontFamily: 'Lexend', fontWeight: 600, fontSize: { xs: '14px', sm: '48px' }, lineHeight: '60px', color: '#000000', marginTop: '100px', marginBottom: '50px'
+                display: 'flex', justifyContent: 'center', fontFamily: 'Lexend', fontWeight: 600, fontSize: { xs: '20px', sm: '48px' }, lineHeight: '60px', color: '#000000', marginTop: { xs: "5px", md: '70px' } , marginBottom: {xs: "10px", md:"50px"}
             }}>Projects</Box>
 
             <Box className="wrapper">
