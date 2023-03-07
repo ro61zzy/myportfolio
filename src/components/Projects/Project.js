@@ -4,7 +4,7 @@ import "./project.css";
 
 import One from "../../assets/techis.png";
 import Two from "../../assets/gt.png";
-import Three from "../../assets/three.png";
+import Three from "../../assets/qr.png";
 import Four from "../../assets/fittgym.png";
 import Five from "../../assets/bagpack.png";
 import Six from "../../assets/seasons.png";
@@ -46,7 +46,7 @@ function Project() {
           </Link>
         </Box>
         <Box>
-          <Link href="">
+          <Link href="https://rozzy-qr-code.netlify.app/">
             <LazyLoad offset={100}>
               <img src={Three} alt="img" />
             </LazyLoad>
