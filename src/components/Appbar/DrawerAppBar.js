@@ -6,26 +6,21 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Container } from "@mui/material";
+import { Container, Link } from "@mui/material";
 
 import "./appbar.css";
 
-import Logo from "../../assets/Logo.png"
+import Logo from "../../assets/Logo.png";
 import Twitter from "../../assets/twitter.png";
 import whatsapp from "../../assets/whatsapp.png";
 import Gh from "../../assets/github.png";
 import LinkedIn from "../../assets/linkedin.png";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Skills", "Project"];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -37,11 +32,86 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" >
-      <img src={Logo} alt="logo" height="80px" />
+      <Typography variant="h6">
+        <img src={Logo} alt="logo" height="80px" />
       </Typography>
       <Divider />
-      <List>
+
+      <Box
+        sx={{ display: "flex", flexDirection: "column", textAlign: "center" }}
+      >
+        <Link href="#home" variant="body2" style={{ textDecoration: "none" }}>
+          <Button
+            sx={{
+              color: "#000",
+              fontFamily: "Lexend",
+              fontWeight: 400,
+              fontSize: "15px",
+              textTransform: "capitalize",
+            }}
+          >
+            Home
+          </Button>
+        </Link>
+        <Link href="#skills" variant="body2" style={{ textDecoration: "none" }}>
+          <Button
+            sx={{
+              color: "#000",
+              fontFamily: "Lexend",
+              fontWeight: 400,
+              fontSize: "15px",
+              textTransform: "capitalize",
+            }}
+          >
+            Skills
+          </Button>
+        </Link>
+        <Link
+          href="#projects"
+          variant="body2"
+          style={{ textDecoration: "none" }}
+        >
+          <Button
+            sx={{
+              color: "#000",
+              fontFamily: "Lexend",
+              fontWeight: 400,
+              fontSize: "15px",
+              textTransform: "capitalize",
+            }}
+          >
+            Projects
+          </Button>
+        </Link>
+
+        <Box
+          sx={{
+            justifyContent: "space-evenly",
+            flex: 0.3,
+            display: "flex",
+            height: "10px",
+            mt:"66vh",
+            
+            p:"10px"
+           
+          }}
+        >
+          <a href="https://twitter.com/rosewachukak?s=21&t=744hFtUA20Cl0Ho8d2-aag">
+            <img src={Twitter} alt="twitter" height="40px" />
+          </a>
+          <a href="https://wa.me/+254758655408">
+            <img src={whatsapp} alt="whatsapp" height="40px" />
+          </a>
+          <a href="https://github.com/ro61zzy">
+            <img src={Gh} alt="github" height="40px" />
+          </a>
+          <a href="https://www.linkedin.com/in/rose-wachuka-6086861b1">
+            <img src={LinkedIn} alt="linkedin" height="40px" />
+          </a>
+        </Box>
+      </Box>
+
+      {/* <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
@@ -50,7 +120,7 @@ function DrawerAppBar(props) {
           </ListItem>
           
         ))}
-      </List>
+      </List> */}
     </Box>
   );
 
@@ -89,11 +159,78 @@ function DrawerAppBar(props) {
                   fontFamily: "Lexend",
                 }}
               >
-                <img src={Logo} alt="logo" height="50px" />
+                <img src={Logo} alt="logo" height="70px" width="80px" />
               </Typography>
             </Box>
 
             <Box
+              sx={{
+                justifyContent: "space-evenly",
+                flex: 0.6,
+                display: { xs: "none", sm: "flex" },
+              }}
+            >
+              <Link
+                href="#home"
+                variant="body2"
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  sx={{
+                    display: "flex",
+                    color: "#000",
+                    fontFamily: "Lexend",
+                    fontWeight: 400,
+                    fontSize: "20px",
+                    textTransform: "capitalize",
+                    textDecoration: "none",
+                  }}
+                >
+                  Home
+                </Button>
+              </Link>
+
+              <Link
+                href="#skills"
+                variant="body2"
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  sx={{
+                    display: "flex",
+                    color: "#000",
+                    fontFamily: "Lexend",
+                    fontWeight: 400,
+                    fontSize: "20px",
+                    textTransform: "capitalize",
+                    textDecoration: "none",
+                  }}
+                >
+                  Skills
+                </Button>
+              </Link>
+              <Link
+                href="#projects"
+                variant="body2"
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  sx={{
+                    display: "flex",
+                    color: "#000",
+                    fontFamily: "Lexend",
+                    fontWeight: 400,
+                    fontSize: "20px",
+                    textTransform: "capitalize",
+                    textDecoration: "none",
+                  }}
+                >
+                  Projects
+                </Button>
+              </Link>
+            </Box>
+
+            {/* <Box
               sx={{
                 justifyContent: "space-evenly",
                 flex: 0.3,
@@ -114,7 +251,7 @@ function DrawerAppBar(props) {
                   {item}
                 </Button>
               ))}
-            </Box>
+            </Box> */}
             {/* 
             <Box sx={{ justifyContent:"space-evenly",  flex:.45, display: { xs: "none", sm: "flex" }, }}>
               <img src={Twitter} alt="twitter"/>
@@ -137,7 +274,7 @@ function DrawerAppBar(props) {
                 <img src={whatsapp} alt="whatsapp" />
               </a>
               <a href="https://github.com/ro61zzy">
-              <img src={Gh} alt="github"/>
+                <img src={Gh} alt="github" />
               </a>
               <a href="https://www.linkedin.com/in/rose-wachuka-6086861b1">
                 <img src={LinkedIn} alt="linkedin" />

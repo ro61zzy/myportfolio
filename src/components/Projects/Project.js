@@ -14,7 +14,7 @@ import LazyLoad from 'react-lazyload'
 
 function Project() {
     return (
-        <Container maxWidth='xl'>
+        <Container id="projects" maxWidth='xl'>
 
             <Box sx={{
                 display: 'flex', justifyContent: 'center', fontFamily: 'Lexend', fontWeight: 600, fontSize: { xs: '14px', sm: '48px' }, lineHeight: '60px', color: '#000000', marginTop: '100px', marginBottom: '50px'

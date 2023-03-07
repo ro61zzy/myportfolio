@@ -14,7 +14,7 @@ let style = {
 
 function Home() {
     return (
-        <Container maxWidth='xl' sx={{ marginTop: '100px' }}>
+        <Container id="home" maxWidth='xl' sx={{ marginTop: '100px' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingLeft: { sm: '1.8rem' }, paddingRight: { sm: '1.8rem' } }}>
                 <Box sx={{
                     position: 'relative',

@@ -4,7 +4,7 @@ import { Container, Typography} from "@mui/material";
 
 export default function BoxSx() {
   return (
-    <Container maxWidth="xl" sx={{ p:{ xs: "11px", md: "20px" }, mt:"65px" }}>
+    <Container id="skills" maxWidth="xl" sx={{ p:{ xs: "11px", md: "20px" }, mt:"65px" }}>
       <Box
         sx={{
           borderRadius: "40px",
