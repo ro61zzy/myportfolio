@@ -5,7 +5,7 @@ import "./project.css";
 import One from "../../assets/techis.png";
 import Two from "../../assets/bagpack.png";
 import Three from "../../assets/three.png";
-import Four from "../../assets/four.png";
+import Four from "../../assets/fittgym.png";
 import Five from "../../assets/five.png";
 import Six from "../../assets/six.png";
 import LazyLoad from "react-lazyload";

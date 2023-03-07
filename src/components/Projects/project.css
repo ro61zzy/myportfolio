@@ -6,7 +6,7 @@
 .wrapper div img {
     object-fit: scale-down;
     width:100%;
-    margin: 30px;
+    /* margin: 30px; */
     align-items:'center'
 }
 .first {
@@ -20,4 +20,9 @@
     background-image: url('../../assets/two.png');
     background-size: cover;
     position: relative;
+}
+@media (max-width: 450px) {
+    .wrapper{
+        grid-gap: 18px;
+    }
 }
