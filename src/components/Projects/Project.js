@@ -3,11 +3,11 @@ import { Box, Container, Grid, Link } from "@mui/material";
 import "./project.css";
 
 import One from "../../assets/techis.png";
-import Two from "../../assets/bagpack.png";
+import Two from "../../assets/gt.png";
 import Three from "../../assets/three.png";
 import Four from "../../assets/fittgym.png";
-import Five from "../../assets/five.png";
-import Six from "../../assets/six.png";
+import Five from "../../assets/bagpack.png";
+import Six from "../../assets/seasons.png";
 import LazyLoad from "react-lazyload";
 
 function Project() {
@@ -39,7 +39,7 @@ function Project() {
           </Link>
         </Box>
         <Box>
-          <Link href="https://baggpack.netlify.app/" >
+          <Link href="https://green-thumb-pi.vercel.app/" >
             <LazyLoad offset={100}>
               <img src={Two} alt="img" margin="20px" />
             </LazyLoad>
@@ -53,21 +53,21 @@ function Project() {
           </Link>
         </Box>
         <Box>
-          <Link href="">
+          <Link href="https://fittgym.netlify.app/">
             <LazyLoad offset={100}>
               <img src={Four} alt="img" />
             </LazyLoad>
           </Link>
         </Box>
         <Box>
-          <Link href="">
+          <Link href="https://baggpack.netlify.app/">
             <LazyLoad offset={100}>
               <img src={Five} alt="img" />
             </LazyLoad>
           </Link>
         </Box>
         <Box>
-          <Link href="">
+          <Link href="https://season-scented-candles.vercel.app/">
             <LazyLoad offset={100}>
               <img src={Six} alt="img" />
             </LazyLoad>
