@@ -10,7 +10,7 @@ function Index() {
       <Grid container>
         <Grid item xs={7} sm={4}>
           <Box >
-            <img src={Rectangle} alt='image' />
+            <img src={Rectangle} alt='rectangle' />
           </Box>
         </Grid>
         <Grid item xs={5} sm={8}>
