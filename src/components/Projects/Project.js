@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid, Link } from "@mui/material";
+import { Box, Container, Link } from "@mui/material";
 import "./project.css";
 
 import One from "../../assets/techis.png";

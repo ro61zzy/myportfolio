@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, Container, Grid, Stack, TextField } from "@mui/material";
 import Rectangle from "../../assets/images.jpeg";
 import "./contact.css";
-import TextInput from "../textfield/textfield";
+//import TextInput from "../textfield/textfield";
 
 function Index() {
   return (
