@@ -31,14 +31,14 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", height:"100vh"}}>
       <Typography variant="h6">
         <img src={Logo} alt="logo" height="80px" />
       </Typography>
       <Divider />
 
       <Box
-        sx={{ display: "flex", flexDirection: "column", textAlign: "center" }}
+        sx={{ display: "flex", flexDirection: "column",gap:"50px", textAlign: "center", height:"100vh !important"}}
       >
         <Link href="#home" variant="body2" style={{ textDecoration: "none" }}>
           <Button
@@ -89,8 +89,8 @@ function DrawerAppBar(props) {
             justifyContent: "space-evenly",
             flex: 0.3,
             display: "flex",
-            height: "10px",
-            mt:"66vh",
+            height: "100%",
+            // mt:"66vh",
             
             p:"10px"
            
@@ -111,16 +111,7 @@ function DrawerAppBar(props) {
         </Box>
       </Box>
 
-      {/* <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />             
-            </ListItemButton>
-          </ListItem>
-          
-        ))}
-      </List> */}
+     
     </Box>
   );
 
