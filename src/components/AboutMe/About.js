@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import him from "../../assets/mee1.png";
+import me from "../../assets/meee.jpeg";
 //import dwnd from "../../assets/dwnd.png";
 import { Button, Container } from "@mui/material";
 import LazyLoad from "react-lazyload";
@@ -45,8 +45,8 @@ export default function ColumnsGrid() {
           <Box>
             <LazyLoad height={140} offset={100}>
               <Img
-                src={him}
-                alt="him"
+                src={me}
+                alt="me"
                 sx={{
                   mt: { xs: "11px", md: "35px" },
                   p: { xs: "8px", md: "1px" },
