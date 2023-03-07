@@ -16,18 +16,16 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
 
-import './appbar.css'
+import "./appbar.css";
 
-
-
-import Twitter from '../../assets/twitter.png'
-import whatsapp from '../../assets/whatsapp.png'
-import Gh from '../../assets/github.png'
-import LinkedIn from '../../assets/linkedin.png'
-
+import Logo from "../../assets/Logo.png"
+import Twitter from "../../assets/twitter.png";
+import whatsapp from "../../assets/whatsapp.png";
+import Gh from "../../assets/github.png";
+import LinkedIn from "../../assets/linkedin.png";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Skills", "project"];
+const navItems = ["Home", "Skills", "Project"];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -39,17 +37,18 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+      <Typography variant="h6" >
+      <img src={Logo} alt="logo" height="80px" />
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item} />             
             </ListItemButton>
           </ListItem>
+          
         ))}
       </List>
     </Box>
@@ -59,9 +58,13 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", }} >
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar elevation={0} component="nav"  sx={{backgroundColor:'#fff', color:'#000', pt:'27px'}}>
+      <AppBar
+        elevation={0}
+        component="nav"
+        sx={{ backgroundColor: "#fff", color: "#000", pt: "27px" }}
+      >
         <Container maxWidth="xl">
           {" "}
           <Toolbar>
@@ -74,33 +77,74 @@ function DrawerAppBar(props) {
             >
               <MenuIcon />
             </IconButton>
-            
-            <Box sx={{ flex: .25}}>
+
+            <Box sx={{ flex: 0.25 }}>
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ display: { xs: "none", sm: "block" }, fontSize:'40px', fontWeight:500, fontFamily:'Lexend' }}
+                sx={{
+                  display: { xs: "none", sm: "block" },
+                  fontSize: "40px",
+                  fontWeight: 500,
+                  fontFamily: "Lexend",
+                }}
               >
-                Logo
+                <img src={Logo} alt="logo" height="50px" />
               </Typography>
             </Box>
 
-            <Box sx={{ justifyContent:"space-evenly", flex:.3, display: { xs: "none", sm: "flex" }}}>
+            <Box
+              sx={{
+                justifyContent: "space-evenly",
+                flex: 0.3,
+                display: { xs: "none", sm: "flex" },
+              }}
+            >
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#000", fontFamily:'Lexend', fontWeight:400, fontSize:'20px', textTransform:'capitalize' }}>
+                <Button
+                  key={item}
+                  sx={{
+                    color: "#000",
+                    fontFamily: "Lexend",
+                    fontWeight: 400,
+                    fontSize: "20px",
+                    textTransform: "capitalize",
+                  }}
+                >
                   {item}
                 </Button>
               ))}
             </Box>
-
+            {/* 
             <Box sx={{ justifyContent:"space-evenly",  flex:.45, display: { xs: "none", sm: "flex" }, }}>
               <img src={Twitter} alt="twitter"/>
               <img src={whatsapp} alt="whatsapp"/>
               <img src={Gh} alt="github"/>
               <img src={LinkedIn} alt="linkedin"/>
+            </Box> */}
+
+            <Box
+              sx={{
+                justifyContent: "space-evenly",
+                flex: 0.45,
+                display: { xs: "none", sm: "flex" },
+              }}
+            >
+              <a href="https://twitter.com/rosewachukak?s=21&t=744hFtUA20Cl0Ho8d2-aag">
+                <img src={Twitter} alt="twitter" />
+              </a>
+              <a href="https://wa.me/+254758655408">
+                <img src={whatsapp} alt="whatsapp" />
+              </a>
+              <a href="https://github.com/ro61zzy">
+              <img src={Gh} alt="github"/>
+              </a>
+              <a href="https://www.linkedin.com/in/rose-wachuka-6086861b1">
+                <img src={LinkedIn} alt="linkedin" />
+              </a>
             </Box>
-              {/* <Button sx={{backgroundColor:'#D9D9D9',height:'60px', color:'#000', borderRadius:'11px',alignSelf:'center', fontFamily:'Lexend', fontWeight:400, fontSize:'18px', p:"18px 21px", textTransform:"capitalize"}}> Let's Connect</Button> */}
-           
+
+            {/* <Button sx={{backgroundColor:'#D9D9D9',height:'60px', color:'#000', borderRadius:'11px',alignSelf:'center', fontFamily:'Lexend', fontWeight:400, fontSize:'18px', p:"18px 21px", textTransform:"capitalize"}}> Let's Connect</Button> */}
           </Toolbar>
         </Container>
       </AppBar>
