@@ -58,7 +58,7 @@ export default function ColumnsGrid() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box sx={{ pt: "18%" }}>
+          <Box sx={{ pt: "10%" }}>
             <Typography
               sx={{
                 width: { xs: "200px", md: "100%" },
@@ -69,13 +69,18 @@ export default function ColumnsGrid() {
                 fontSize: { xs: "10px", sm: "22px" },
               }}
             >
-              Hi, I am Rose Wachuka, a dedicated and experienced Front-End
-              Developer. With hands-on experience in HTML, CSS, and JavaScript,
-              I have a strong background in developing responsive and dynamic
-              websites. I am driven by a passion for creating visually appealing
-              and user-friendly web experiences and always stay up-to-date with
-              the latest web development trends to deliver exceptional results
-              for my clients.
+              Hello, I'm Rose Wachuka, a driven Front-End Developer with a
+              passion for creating visually appealing and user-friendly web
+              experiences. With extensive experience in HTML, CSS, and
+              JavaScript, I specialize in developing responsive and dynamic
+              websites. I'm proficient in various programming languages,
+              including JavaScript, ReactJS, MaterialUI, and Tailwindcss.
+              Currently, I'm enrolled in the ALX Holberton Software Engineering
+              program to become a Full-Stack developer. I also work as a
+              Front-End Software Developer at Ngeni Labs, where I work on
+              various projects. My ultimate goal is to use new and innovative
+              technology to create cutting-edge software products that make the
+              world a better place.
             </Typography>
             <Button
               onClick={() =>
@@ -101,7 +106,6 @@ export default function ColumnsGrid() {
               }}
             >
               Download CV
-             
             </Button>
           </Box>
         </Grid>
