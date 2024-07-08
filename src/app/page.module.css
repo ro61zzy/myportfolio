@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 6rem; */
   min-height: 100vh;
 }
 
@@ -22,20 +21,53 @@
 }
 
 .link {
-  color: "#000";
+  color: #fff;
+  text-decoration: none;
   font-size: 30px;
   font-weight: 800;
+  position: relative;
 }
 
 @keyframes navbar-animation {
   to {
-    bottom: 40%;
-    transform: translateY(50%);
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
 }
 
 @keyframes nameBox-animation {
   to {
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: orange;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
 }
