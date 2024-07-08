@@ -1,10 +1,39 @@
+"use client";
+
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className={styles.main}>
-    <p>from scratch</p>
+      <Box className={styles.nameBox}>
+        <Typography
+          sx={{ color: "#700202", fontWeight: "bold", fontSize: "100px" }}
+        >
+          Rose Wachuka
+        </Typography>
+      </Box>
+      <Box className={styles.navbar}>
+        <Link className={styles.link} href="/">
+          Home
+        </Link>
+        <Link className={styles.link} href="/about">
+          About
+        </Link>
+        <Link className={styles.link} href="/about">
+          Resume
+        </Link>
+        <Link className={styles.link} href="/portfolio">
+          Portfolio
+        </Link>
+        <Link className={styles.link} href="/contact">
+          Contact
+        </Link>
+      </Box>
     </main>
   );
-}
+};
+
+export default Home;
