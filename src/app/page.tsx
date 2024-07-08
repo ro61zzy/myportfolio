@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
@@ -16,13 +16,17 @@ const Home = () => {
         </Typography>
       </Box>
       <Box className={styles.navbar}>
-        <Link className={styles.link} href="/">
-          Home
-        </Link>
+        <Button sx={{color:"#000"}} onClick={() => "/"}>
+          <Typography
+            sx={{ color: "#000", fontSize: "30px", fontweight: "800" }}
+          >
+            Home
+          </Typography>
+        </Button>
         <Link className={styles.link} href="/about">
           About
         </Link>
-        <Link className={styles.link} href="/about">
+        <Link className={styles.link} href="/resume">
           Resume
         </Link>
         <Link className={styles.link} href="/portfolio">
