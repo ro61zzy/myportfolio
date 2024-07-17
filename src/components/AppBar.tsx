@@ -5,37 +5,33 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Link from "next/link";
-import Image from "next/image";
-import logo from "../../public/logogroup.png";
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
+  pathname: string; // Add pathname prop
 }
 
-const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const drawerWidth = 200;
 
-export default function DrawerAppBar(props: Props) {
-  const { window } = props;
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Resume", path: "/resume" },
+  { name: "Portfolio", path: "/portfolio" },
+  { name: "Contact", path: "/contact" },
+];
+
+export default function DrawerAppBar({ window, pathname }: Props) { // Destructure pathname prop
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
-  };
-
-  const handleAccountIconClick = () => {
-    console.log("profile function");
   };
 
   const drawer = (
@@ -44,128 +40,39 @@ export default function DrawerAppBar(props: Props) {
         RW
       </Typography>
       <Divider />
-      <Link
-        href="/home"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "12px",
-          padding: "10px 1px",
-          textDecoration: "none",
-        }}
-      >
-        <HomeOutlinedIcon sx={{ color: "#20A8F4" }} />
-        <Button
-          sx={{
-            color: "#000",
-            fontFamily: "Jacques Francois",
-            fontWeight: 400,
-            fontSize: { xs: "13px", sm: "20px" },
-            textTransform: "capitalize",
+      {navItems.map((item) => (
+        <Link
+          key={item.path}
+          href={item.path}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "12px",
+            padding: "10px 1px",
+            textDecoration: "none",
+            borderBottom: pathname === item.path ? "2px solid blue" : "none", // Add underline if current page
           }}
         >
-          Home
-        </Button>
-      </Link>
-      <Link
-        href="/about"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "12px",
-          padding: "10px 1px",
-          textDecoration: "none",
-        }}
-      >
-        <Button
-          sx={{
-            color: "#000",
-            fontFamily: "Jacques Francois",
-            fontWeight: 400,
-            fontSize: { xs: "13px", sm: "20px" },
-            textTransform: "capitalize",
-          }}
-        >
-          About
-        </Button>
-      </Link>
-      <Link
-        href="/resume"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "12px",
-          padding: "10px 1px",
-          textDecoration: "none",
-        }}
-      >
-        <Button
-          sx={{
-            color: "#000",
-            fontFamily: "Jacques Francois",
-            fontWeight: 400,
-            fontSize: { xs: "13px", sm: "20px" },
-            textTransform: "capitalize",
-          }}
-        >
-          Resume
-        </Button>
-      </Link>
-      <Link
-        href="/portfolio"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "12px",
-          padding: "10px 1px",
-          textDecoration: "none",
-        }}
-      >
-        <Button
-          sx={{
-            color: "#000",
-            fontFamily: "Jacques Francois",
-            fontWeight: 400,
-            fontSize: { xs: "13px", sm: "20px" },
-            textTransform: "capitalize",
-          }}
-        >
-          Portfolio
-        </Button>
-      </Link>
-      <Link
-        href="/contact"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "12px",
-          padding: "10px 1px",
-          textDecoration: "none",
-        }}
-      >
-        <Button
-          sx={{
-            color: "#000",
-            fontFamily: "Jacques Francois",
-            fontWeight: 400,
-            fontSize: { xs: "13px", sm: "20px" },
-            textTransform: "capitalize",
-          }}
-        >
-          Contact
-        </Button>
-      </Link>
+          {item.path === "/" && <HomeOutlinedIcon sx={{ color: "#20A8F4" }} />}
+          <Button
+            sx={{
+              color: "#000",
+              fontFamily: "Jacques Francois",
+              fontWeight: 400,
+              fontSize: { xs: "13px", sm: "20px" },
+              textTransform: "capitalize",
+            }}
+          >
+            {item.name}
+          </Button>
+        </Link>
+      ))}
       <Divider />
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -190,147 +97,43 @@ export default function DrawerAppBar(props: Props) {
             }}
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography sx={{}}>Rose Wachuka</Typography>
+              <Typography sx={{ fontSize: { xs: "30px", sm: "60px" }, color: "#720404", fontWeight: "600" }}>
+                Rose Wachuka
+              </Typography>
             </Box>
             <Box
               sx={{
                 display: "flex",
-                alignItems: "center",
-                gap: { sm: "2rem", md: "2rem" },
               }}
             >
               <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-                <Link
-                  href="/home"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "10px 1px",
-                    textDecoration: "none",
-                  }}
-                >
-                  <Button
-                    sx={{
-                      color: "#000",
-                      fontFamily: "Jacques Francois",
-                      fontWeight: 400,
-                      fontSize: { xs: "13px", sm: "20px" },
-                      textTransform: "capitalize",
+                {navItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "12px",
+                      padding: "10px 1px",
+                      textDecoration: "none",
+                      borderBottom: pathname === item.path ? "2px solid blue" : "none", // Add underline if current page
                     }}
                   >
-                    Home
-                  </Button>
-                </Link>
-                <Link
-                  href="/about"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "10px 1px",
-                    textDecoration: "none",
-                  }}
-                >
-                  <Button
-                    sx={{
-                      color: "#000",
-                      fontFamily: "Jacques Francois",
-                      fontWeight: 400,
-                      fontSize: { xs: "13px", sm: "20px" },
-                      textTransform: "capitalize",
-                    }}
-                  >
-                   About
-                  </Button>
-                </Link>
-                <Link
-                  href="/resume"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "10px 1px",
-                    textDecoration: "none",
-                  }}
-                >
-                  <Button
-                    sx={{
-                      color: "#000",
-                      fontFamily: "Jacques Francois",
-                      fontWeight: 400,
-                      fontSize: { xs: "13px", sm: "20px" },
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Resume
-                  </Button>
-                </Link>
-                <Link
-                  href="/portfolio"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "10px 1px",
-                    textDecoration: "none",
-                  }}
-                >
-                  <Button
-                    sx={{
-                      color: "#000",
-                      fontFamily: "Jacques Francois",
-                      fontWeight: 400,
-                      fontSize: { xs: "13px", sm: "20px" },
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Portfolio
-                  </Button>
-                </Link>
-                <Link
-                  href="/contact"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "10px 1px",
-                    textDecoration: "none",
-                  }}
-                >
-                  <Button
-                    sx={{
-                      color: "#000",
-                      fontFamily: "Jacques Francois",
-                      fontWeight: 400,
-                      fontSize: { xs: "13px", sm: "20px" },
-                      textTransform: "capitalize",
-                    }}
-                  >
-                   Contact
-                  </Button>
-                </Link>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  pr: { sm: "10px", md: "2rem" },
-                  justifyContent: "flex-end",
-                }}
-              >
-                <AccountCircleOutlinedIcon
-                  onClick={handleAccountIconClick}
-                  sx={{
-                    color: "#1d6b97",
-                    fontSize: { xs: "2.3rem", sm: "4rem" },
-                  }}
-                />
+                    <Button
+                      sx={{
+                        color: "#000",
+                        fontFamily: "Jacques Francois",
+                        fontWeight: 400,
+                        fontSize: { xs: "13px", sm: "20px" },
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      {item.name}
+                    </Button>
+                  </Link>
+                ))}
               </Box>
             </Box>
           </Box>

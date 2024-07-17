@@ -1,14 +1,13 @@
-"use client"
+"use client";
 
 // src/app/layout.tsx
 import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
-import { AppBar, Toolbar, Typography, CssBaseline, Container } from "@mui/material";
+import { CssBaseline } from "@mui/material";
 import "./globals.css";
 import DrawerAppBar from "@/components/AppBar";
 
 const inter = Inter({ subsets: ["latin"] });
-
 
 export default function RootLayout({
   children,
@@ -22,10 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <CssBaseline />
-        {showAppBar && (
-          <DrawerAppBar />
-        )}
-        <div style={{backgroundColor:"#fff"}}>{children}</div>
+        {showAppBar && <DrawerAppBar pathname={pathname} />}
+        <div className="content">{children}</div>
       </body>
     </html>
   );
