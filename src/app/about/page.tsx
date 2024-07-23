@@ -7,6 +7,8 @@ import react from "../../../public/react.png";
 import next from "../../../public/next.png"
 import postgresql from "../../../public/postgresql.png"
 import prisma from "../../../public/prisma.png"
+import mui from "../../../public/mui.png"
+import nodejs from "../../../public/nodejs.png"
 import { useRouter } from "next/navigation";
 
 const About = () => {
@@ -106,7 +108,7 @@ const About = () => {
               >
                 <Image
                   src={next}
-                  alt="reacrt-js"
+                  alt="next-js"
                   width={20}
                   height={20}
                   quality={100}
@@ -132,7 +134,7 @@ const About = () => {
               >
                 <Image
                   src={react}
-                  alt="reacrt-js"
+                  alt="react-js"
                   width={20}
                   height={20}
                   quality={100}
@@ -176,6 +178,32 @@ const About = () => {
                   alignItems: "center",
                   justifyContent: "space-evenly",
                   textTransform: "none",
+                  backgroundColor:"#608b68",
+                  borderRadius:"15px",
+                  width:"18%"
+                }}
+                onClick={() => route.push("https://www.prisma.io/")}
+              >
+                <Image
+                  src={nodejs}
+                  alt="nodejs"
+                  width={20}
+                  height={20}
+                  quality={100}
+                  style={{ borderRadius: "50%" }}
+                />
+                <Typography
+                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                >
+                  Node Js
+                </Typography>
+              </Button>
+              <Button
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  textTransform: "none",
                   backgroundColor:"#4D5AD1",
                   borderRadius:"15px",
                   width:"18%"
@@ -196,6 +224,33 @@ const About = () => {
                   Prisma
                 </Typography>
               </Button>
+              <Button
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  textTransform: "none",
+                  backgroundColor:"#0073e6",
+                  borderRadius:"15px",
+                  width:"18%"
+                }}
+                onClick={() => route.push("https://mui.com/")}
+              >
+                <Image
+                  src={mui}
+                  alt="material ui"
+                  width={20}
+                  height={20}
+                  quality={100}
+                  style={{ borderRadius: "50%" }}
+                />
+                <Typography
+                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                >
+                  Material UI
+                </Typography>
+              </Button>
+         
             </Box>
           </Box>
           <Typography
