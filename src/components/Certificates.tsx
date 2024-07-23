@@ -1,85 +1,109 @@
-"use client"
-
+// components/Carousel.tsx
 import React from 'react';
-import Slider from "react-slick";
-import { Box, Typography } from '@mui/material';
+import Slider from 'react-slick';
+import { Box } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Image from 'next/image';
-import certOne from "../../public/certs/cert_one.png";
-import certTwo from "../../public/certs/cert_two.png"; 
-import certThree from "../../public/certs/cert_three.png";
+import Image from 'next/image'; // Import Image component from Next.js
 
-const Certificates = () => {
-    const settings = {
-        className: "center",
-        centerMode: true,
-        centerPadding: '0',
-        slidesToShow: 3,
-        focusOnSelect: true,
-        infinite: true,
-        speed: 500,
-        afterChange: (index: any) => console.log(`Current slide index: ${index}`),
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              centerPadding: '40px',
-            },
-          },
-        ],
-    };
+// Replace these with your actual image paths
+const carouselImages = [
+  '/certs/cert_one.png',
+  '/certs/cert_two.png',
+//   '/certs/cert_three.png',
+];
 
-    const certificates = [
-        {
-          id: 1,
-          title: 'Certificate 1',
-          description: 'Description for Certificate 1',
-          imageUrl: certOne,
+const Carousel: React.FC = () => {
+  const settings = {
+    centerMode: true,
+    infinite: true,
+    centerPadding: '10px', // Adjust center padding as needed
+    speed: 500,
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768, // For tablets
+        settings: {
+          centerPadding: '1px', // Adjust padding for tablets
         },
-        {
-          id: 2,
-          title: 'Certificate 2',
-          description: 'Description for Certificate 2',
-          imageUrl: certTwo,
+      },
+      {
+        breakpoint: 480, // For mobile devices
+        settings: {
+          centerPadding: '10px', // Adjust padding for mobile devices
         },
-        {
-            id: 3,
-            title: 'Certificate 2',
-            description: 'Description for Certificate 2',
-            imageUrl: certThree,
-          },
-        // Add more certificates as needed
-    ];
+      },
+    ],
+    appendDots: (dots: React.ReactNode) => (
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: '10px',
+          width: '100%',
+          textAlign: 'center',
+        }}
+      >
+        {dots}
+      </Box>
+    ),
+  };
 
-    return (
-        <Box sx={{ width: '100%', margin: '0 auto', mt: 4 }}>
-            <Slider {...settings}>
-                {certificates.map((certificate) => (
-                    <Box key={certificate.id} sx={{ px: 2, textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-                        <Image
-                            src={certificate.imageUrl}
-                            alt={certificate.title}
-                            width={400}
-                            height={300}
-                            style={{
-                                borderRadius: '10px',
-                                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-                                transition: 'transform 0.5s',
-                            }}
-                        />
-                        <Typography variant="h6" sx={{ mt: 2 }}>
-                            {certificate.title}
-                        </Typography>
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                            {certificate.description}
-                        </Typography>
-                    </Box>
-                ))}
-            </Slider>
-        </Box>
-    )
-}
+  return (
+    <Box
+      sx={{
+        position: 'relative',
+        width: '100%', // Full width
+        maxWidth: '80%', // Max width of the container
+        margin: '40px auto',
+        mb:{xs:"0px", sm:"8rem", md:"2rem", lg:"6.5rem"},
+        height: '280px', // Set a fixed height for the carousel
+        '@media (max-width: 768px)': {
+          maxWidth: '90%', // Adjust max width for tablets
+        },
+        '@media (max-width: 480px)': {
+          maxWidth: '100%', // Adjust max width for mobile devices
+        },
+        '& .slick-slide': {
+          padding: '0 10px',
+        },
+        '& .slick-slide img': {
+          borderRadius: '8px',
+          background: '#fff',
+          width: '100%',
+          height: {xs:"18vh", sm:'20vh', md:"45vh"},
+          transition: 'all 300ms ease',
+          opacity: 0.8,
+          transform: 'scale(0.9)',
+          objectFit: 'fit', // Ensure the image covers the container while maintaining its aspect ratio
+        },
+        '& .slick-center img': {
+          transform: 'scale(1.0)',
+          opacity: 1,
+        },
+        '& .slick-dots': {
+          bottom: '10px',
+        },
+      }}
+    >
+      <Slider {...settings}>
+        {carouselImages.map((src, index) => (
+          <Box key={index}>
+            <Image
+              src={src}
+              alt={`Slide ${index + 1}`}
+              width={400}
+              height={300}
+              layout="fit" 
+              objectFit="fit" 
+              priority // Optionally add priority for performance
+            />
+          </Box>
+        ))}
+      </Slider>
+    </Box>
+  );
+};
 
-export default Certificates;
+export default Carousel;
