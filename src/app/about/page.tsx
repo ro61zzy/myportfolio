@@ -6,6 +6,7 @@ import pic from "../../../public/images.jpeg";
 import Tools from "@/components/Tools";
 import { useRouter } from "next/navigation";
 import Certificates from "@/components/Certificates";
+import Skills from "@/components/Skills";
 
 const About = () => {
   const route = useRouter();
@@ -116,7 +117,7 @@ const About = () => {
             >
              Skills
             </Typography>
-            <Certificates />
+            <Skills />
           </Box>
         </Box>
       </Box>
