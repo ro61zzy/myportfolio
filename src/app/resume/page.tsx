@@ -1,3 +1,4 @@
+import Experience from "@/components/Experience";
 import { Box } from "@mui/material";
 import React from "react";
 
@@ -19,7 +20,9 @@ const Resume = () => {
           padding: "1rem 2rem",
           width: "100%",
         }}
-      ></Box>
+      >
+        <Experience />
+      </Box>
     </Box>
   );
 };
