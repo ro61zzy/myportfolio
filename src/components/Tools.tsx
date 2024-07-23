@@ -29,7 +29,7 @@ const Tools = () => {
                   textTransform: "none",
                   backgroundColor:"#000",
                   borderRadius:"15px",
-                  width:"18%",
+                  width:{xs:"42%", sm:"30%", md:"20%"},
                   p:"10px"
                 }}
                 onClick={() => route.push("https://nextjs.org/")}
@@ -37,13 +37,13 @@ const Tools = () => {
                 <Image
                   src={next}
                   alt="next-js"
-                  width={20}
-                  height={20}
+                  width={35}
+                  height={35}
                   quality={100}
                   style={{ borderRadius: "50%" }}
                 />
                 <Typography
-                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                  sx={{ color: "#fff", fontSize: {xs:"14px", xl:"28px"}, fontWeight: "600" }}
                 >
                   Next-Js
                 </Typography>
@@ -56,7 +56,7 @@ const Tools = () => {
                   textTransform: "none",
                   backgroundColor:"#10BBE0",
                   borderRadius:"15px",
-                  width:"18%",
+                  width:{xs:"42%", sm:"30%", md:"20%"},
                   p:"10px"
                 }}
                 onClick={() => route.push("https://react.dev/")}
@@ -64,13 +64,13 @@ const Tools = () => {
                 <Image
                   src={react}
                   alt="react-js"
-                  width={20}
-                  height={20}
+                  width={35}
+                  height={35}
                   quality={100}
                   style={{ borderRadius: "50%" }}
                 />
                 <Typography
-                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                  sx={{ color: "#fff", fontSize:{xs:"14px", xl:"28px"}, fontWeight: "600" }}
                 >
                   React-Js
                 </Typography>
@@ -83,7 +83,7 @@ const Tools = () => {
                   textTransform: "none",
                   backgroundColor:"#2D608F",
                   borderRadius:"15px",
-                  width:"18%",
+                  width:{xs:"42%", sm:"30%", md:"20%"},
                   p:"10px"
                 }}
                 onClick={() => route.push("https://www.postgresql.org/")}
@@ -91,13 +91,13 @@ const Tools = () => {
                 <Image
                   src={postgresql}
                   alt="postgress"
-                  width={20}
-                  height={20}
+                  width={35}
+                  height={35}
                   quality={100}
                   style={{ borderRadius: "50%" }}
                 />
                 <Typography
-                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                  sx={{ color: "#fff", fontSize: {xs:"14px", xl:"28px"}, fontWeight: "600" }}
                 >
                   Postgresql
                 </Typography>
@@ -110,7 +110,7 @@ const Tools = () => {
                   textTransform: "none",
                   backgroundColor:"#608b68",
                   borderRadius:"15px",
-                  width:"18%",
+                  width:{xs:"42%", sm:"30%", md:"20%"},
                   p:"10px"
                 }}
                 onClick={() => route.push("https://www.prisma.io/")}
@@ -118,13 +118,13 @@ const Tools = () => {
                 <Image
                   src={nodejs}
                   alt="nodejs"
-                  width={20}
-                  height={20}
+                  width={35}
+                  height={35}
                   quality={100}
                   style={{ borderRadius: "50%" }}
                 />
                 <Typography
-                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                  sx={{ color: "#fff", fontSize:{xs:"14px", xl:"28px"}, fontWeight: "600" }}
                 >
                   Node Js
                 </Typography>
@@ -137,7 +137,7 @@ const Tools = () => {
                   textTransform: "none",
                   backgroundColor:"#4D5AD1",
                   borderRadius:"15px",
-                  width:"18%",
+                  width:{xs:"42%", sm:"30%", md:"20%"},
                   p:"10px"
                 }}
                 onClick={() => route.push("https://www.prisma.io/")}
@@ -145,13 +145,13 @@ const Tools = () => {
                 <Image
                   src={prisma}
                   alt="prisma"
-                  width={20}
-                  height={20}
+                  width={35}
+                  height={35}
                   quality={100}
                   style={{ borderRadius: "50%" }}
                 />
                 <Typography
-                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                  sx={{ color: "#fff", fontSize: {xs:"14px", xl:"28px"}, fontWeight: "600" }}
                 >
                   Prisma
                 </Typography>
@@ -164,21 +164,21 @@ const Tools = () => {
                   textTransform: "none",
                   backgroundColor:"#0073e6",
                   borderRadius:"15px",
-                  width:"18%",
-                  p:"10px"
+                  width:{xs:"42%", sm:"30%", md:"20%"},
+                  p:{xs:"10px"}
                 }}
                 onClick={() => route.push("https://mui.com/")}
               >
                 <Image
                   src={mui}
                   alt="material ui"
-                  width={20}
-                  height={20}
+                  width={35}
+                  height={35}
                   quality={100}
                   style={{ borderRadius: "50%" }}
                 />
                 <Typography
-                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                  sx={{ color: "#fff", fontSize: {xs:"14px", xl:"28px"}, fontWeight: "600" }}
                 >
                   Material UI
                 </Typography>

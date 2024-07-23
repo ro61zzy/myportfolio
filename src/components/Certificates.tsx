@@ -56,8 +56,8 @@ const Carousel: React.FC = () => {
         position: 'relative',
         width: '100%', // Full width
         maxWidth: '80%', // Max width of the container
-        margin: '40px auto',
-        mb:{xs:"0px", sm:"8rem", md:"2rem", lg:"6.5rem"},
+        margin: '18px auto',
+        mb:{xs:"0px", sm:"0.5px", md:"0.5px", lg:"6.5rem", xl:"30rem"},
         height: '280px', // Set a fixed height for the carousel
         '@media (max-width: 768px)': {
           maxWidth: '90%', // Adjust max width for tablets

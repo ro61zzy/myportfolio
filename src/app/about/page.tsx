@@ -33,6 +33,7 @@ const About = () => {
             sx={{
               display: "flex",
               alignItems: "center",
+              flexDirection:{xs:"column", sm:"column", md:"row"},
               gap: "2rem",
               p: "2rem",
             }}
@@ -91,7 +92,7 @@ const About = () => {
             </Typography>
            <Tools />
           </Box>
-          <Box>
+          <Box sx={{pt:"2.8rem"}}>
           <Typography
               sx={{
                 color: "#fff",
@@ -104,68 +105,19 @@ const About = () => {
             </Typography>
             <Certificates />
           </Box>
+          <Box sx={{pt:"2.8rem"}}>
           <Typography
-            sx={{ color: "#fff", fontSize: "40px", fontWeight: "500" }}
-          >
-            About me
-          </Typography>
-          <Typography
-            sx={{ color: "red", fontSize: "20px", fontWeight: "500" }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Typography>
-          {/* Repeat the Typography tags as needed */}
-          <Typography
-            sx={{ color: "red", fontSize: "20px", fontWeight: "500" }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Typography>
-          <Typography
-            sx={{ color: "red", fontSize: "20px", fontWeight: "500" }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Typography>
-          <Typography
-            sx={{ color: "red", fontSize: "20px", fontWeight: "500" }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Typography>
-          <Typography
-            sx={{ color: "red", fontSize: "20px", fontWeight: "500" }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Typography>
-          {/* Add more Typography components here */}
+              sx={{
+                color: "#fff",
+                fontWeight: "700",
+                fontSize: { xs: "", sm: "25px" },
+                pb:"1rem"
+              }}
+            >
+             Skills
+            </Typography>
+            <Certificates />
+          </Box>
         </Box>
       </Box>
     </div>
