@@ -4,12 +4,12 @@ import React from 'react'
 import { useRouter } from "next/navigation";
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
-import react from "../../public/react.png";
-import next from "../../public/next.png"
-import postgresql from "../../public/postgresql.png"
-import prisma from "../../public/prisma.png"
-import mui from "../../public/mui.png"
-import nodejs from "../../public/nodejs.png"
+import react from "../../public/tools/react.png";
+import next from "../../public/tools/next.png"
+import postgresql from "../../public/tools/postgresql.png"
+import prisma from "../../public/tools/prisma.png"
+import mui from "../../public/tools/mui.png"
+import nodejs from "../../public/tools/nodejs.png"
 
 const Tools = () => {
     const route = useRouter();
