@@ -61,22 +61,28 @@ export default function VerticalTabs() {
       aria-label="Vertical tabs example"
       sx={{ borderRight: 1, borderColor: 'divider', minWidth: '200px', color: 'white' }}
     >
-      <Tab label="Company One" {...a11yProps(0)} sx={{ color: 'white' }} />
+      <Tab label="SokoFresh Agri Innovation EA" {...a11yProps(0)} sx={{ color: 'white' }} />
       <Tab label="Company Two" {...a11yProps(1)} sx={{ color: 'white' }} />
       <Tab label="Company Three" {...a11yProps(2)} sx={{ color: 'white' }} />
     </Tabs>
     <TabPanel value={value} index={0}>
-      <Typography variant="h6" sx={{ color: 'white' }}>Role Title One</Typography>
-      <Typography variant="subtitle1" sx={{ color: 'white' }}>Year Period: 2020 - 2021</Typography>
+      <Typography variant="h5" sx={{ color: 'white' }}>FrontEnd Developer</Typography>
+      <Typography variant="subtitle1" sx={{ color: 'white' }}> Jun 2023 - Present</Typography>
       <List>
         <ListItem>
-          <ListItemText primary="Bullet point one for Company One" primaryTypographyProps={{ style: { color: 'white' } }} />
+          <ListItemText primary="Developed the company’s mobile application with React Native." primaryTypographyProps={{ style: { color: 'white', fontWeight:"600" } }} />
         </ListItem>
         <ListItem>
-          <ListItemText primary="Bullet point two for Company One" primaryTypographyProps={{ style: { color: 'white' } }} />
+          <ListItemText primary="Translated UI’s into functional and responsive mobile and web frontends." primaryTypographyProps={{ style: { color: 'white' } }} />
         </ListItem>
         <ListItem>
-          <ListItemText primary="Bullet point three for Company One" primaryTypographyProps={{ style: { color: 'white' } }} />
+          <ListItemText primary="Developed web applications using React-js, Next-js, and Redux." primaryTypographyProps={{ style: { color: 'white' } }} />
+        </ListItem>
+        <ListItem>
+          <ListItemText primary="Developed web applications using React-js, Next-js, and Redux." primaryTypographyProps={{ style: { color: 'white' } }} />
+        </ListItem>
+        <ListItem>
+          <ListItemText primary="Led bug fixes, improving platform stability and performance on Odoo." primaryTypographyProps={{ style: { color: 'white' } }} />
         </ListItem>
       </List>
     </TabPanel>

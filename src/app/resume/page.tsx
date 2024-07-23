@@ -9,7 +9,7 @@ const Resume = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        p: { xs: "5rem 1rem ", sm: "8rem 9%" },
+        p: { xs: "5rem 1rem ", sm: "8rem 9% 2rem 9%" },
         height: "100vh",
         overflowY: "auto",
       }}
