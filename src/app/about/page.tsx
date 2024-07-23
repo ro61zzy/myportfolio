@@ -5,6 +5,8 @@ import Image from "next/image";
 import pic from "../../../public/images.jpeg";
 import react from "../../../public/react.png";
 import next from "../../../public/next.png"
+import postgresql from "../../../public/postgresql.png"
+import prisma from "../../../public/prisma.png"
 import { useRouter } from "next/navigation";
 
 const About = () => {
@@ -96,14 +98,14 @@ const About = () => {
                   alignItems: "center",
                   justifyContent: "space-evenly",
                   textTransform: "none",
-                  backgroundColor:"#10BBE0",
+                  backgroundColor:"#000",
                   borderRadius:"15px",
                   width:"18%"
                 }}
                 onClick={() => route.push("https://nextjs.org/")}
               >
                 <Image
-                  src={react}
+                  src={next}
                   alt="reacrt-js"
                   width={20}
                   height={20}
@@ -122,7 +124,7 @@ const About = () => {
                   alignItems: "center",
                   justifyContent: "space-evenly",
                   textTransform: "none",
-                  backgroundColor:"#000",
+                  backgroundColor:"#10BBE0",
                   borderRadius:"15px",
                   width:"18%"
                 }}
@@ -140,6 +142,58 @@ const About = () => {
                   sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
                 >
                   React-Js
+                </Typography>
+              </Button>
+              <Button
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  textTransform: "none",
+                  backgroundColor:"#2D608F",
+                  borderRadius:"15px",
+                  width:"18%"
+                }}
+                onClick={() => route.push("https://www.postgresql.org/")}
+              >
+                <Image
+                  src={postgresql}
+                  alt="postgress"
+                  width={20}
+                  height={20}
+                  quality={100}
+                  style={{ borderRadius: "50%" }}
+                />
+                <Typography
+                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                >
+                  Postgresql
+                </Typography>
+              </Button>
+              <Button
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  textTransform: "none",
+                  backgroundColor:"#4D5AD1",
+                  borderRadius:"15px",
+                  width:"18%"
+                }}
+                onClick={() => route.push("https://www.prisma.io/")}
+              >
+                <Image
+                  src={prisma}
+                  alt="prisma"
+                  width={20}
+                  height={20}
+                  quality={100}
+                  style={{ borderRadius: "50%" }}
+                />
+                <Typography
+                  sx={{ color: "#fff", fontSize: "14px", fontWeight: "600" }}
+                >
+                  Prisma
                 </Typography>
               </Button>
             </Box>
