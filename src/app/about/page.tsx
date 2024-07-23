@@ -5,6 +5,7 @@ import Image from "next/image";
 import pic from "../../../public/images.jpeg";
 import Tools from "@/components/Tools";
 import { useRouter } from "next/navigation";
+import Certificates from "@/components/Certificates";
 
 const About = () => {
   const route = useRouter();
@@ -89,6 +90,19 @@ const About = () => {
               Languages and Tools
             </Typography>
            <Tools />
+          </Box>
+          <Box>
+          <Typography
+              sx={{
+                color: "#fff",
+                fontWeight: "700",
+                fontSize: { xs: "", sm: "25px" },
+                pb:"1rem"
+              }}
+            >
+              Certificates
+            </Typography>
+            <Certificates />
           </Box>
           <Typography
             sx={{ color: "#fff", fontSize: "40px", fontWeight: "500" }}
