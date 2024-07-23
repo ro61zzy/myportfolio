@@ -116,7 +116,7 @@ export default function DrawerAppBar({ window, pathname }: Props) { // Destructu
                       justifyContent: "center",
                       alignItems: "center",
                       gap: "12px",
-                      padding: "10px 1px",
+                      // padding: "1px 1px",
                       textDecoration: "none",
                       borderBottom: pathname === item.path ? "2px solid blue" : "none", // Add underline if current page
                     }}
