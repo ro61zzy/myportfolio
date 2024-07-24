@@ -17,8 +17,9 @@ const Resume = () => {
       <Box
         sx={{
           backgroundColor: "rgba(0, 0, 0, 0.8)",
-          padding: "1rem 2rem",
+          padding:{xs:"1rem 1rem",sm: "1rem 2rem"},
           width: "100%",
+          height:"80vh"
         }}
       >
         <Experience />

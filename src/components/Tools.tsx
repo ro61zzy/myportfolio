@@ -183,7 +183,33 @@ const Tools = () => {
                   Material UI
                 </Typography>
               </Button>
-         
+              <Button
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  textTransform: "none",
+                  backgroundColor:"#0073e6",
+                  borderRadius:"15px",
+                  width:{xs:"42%", sm:"30%", md:"20%"},
+                  p:{xs:"10px"}
+                }}
+                onClick={() => route.push("https://mui.com/")}
+              >
+                <Image
+                  src={mui}
+                  alt="material ui"
+                  width={35}
+                  height={35}
+                  quality={100}
+                  style={{ borderRadius: "50%" }}
+                />
+                <Typography
+                  sx={{ color: "#fff", fontSize: {xs:"14px", xl:"28px"}, fontWeight: "600" }}
+                >
+                 Mongo DB
+                </Typography>
+              </Button>
             </Box>
   )
 }

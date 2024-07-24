@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
-import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
+import * as React from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -26,11 +27,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`vertical-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -38,12 +35,14 @@ function TabPanel(props: TabPanelProps) {
 function a11yProps(index: number) {
   return {
     id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
+    "aria-controls": `vertical-tabpanel-${index}`,
   };
 }
 
 export default function VerticalTabs() {
   const [value, setValue] = React.useState(0);
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -51,71 +50,202 @@ export default function VerticalTabs() {
 
   return (
     <Box
-    sx={{ flexGrow: 1, display: 'flex', height: 'auto', minHeight: 224 }}
-  >
-    <Tabs
-      orientation="vertical"
-      variant="scrollable"
-      value={value}
-      onChange={handleChange}
-      aria-label="Vertical tabs example"
-      sx={{ borderRight: 1, borderColor: 'divider', minWidth: '200px', color: 'white' }}
+      sx={{
+        flexGrow: 1,
+        display: "flex",
+        flexDirection: isSmallScreen ? "column" : "row",
+        height: "auto",
+        minHeight: 224,
+        // bgcolor: 'background.paper',
+      }}
     >
-      <Tab label="SokoFresh Agri Innovation EA" {...a11yProps(0)} sx={{ color: 'white' }} />
-      <Tab label="Company Two" {...a11yProps(1)} sx={{ color: 'white' }} />
-      <Tab label="Company Three" {...a11yProps(2)} sx={{ color: 'white' }} />
-    </Tabs>
-    <TabPanel value={value} index={0}>
-      <Typography variant="h5" sx={{ color: 'white' }}>FrontEnd Developer</Typography>
-      <Typography variant="subtitle1" sx={{ color: 'white' }}> Jun 2023 - Present</Typography>
-      <List>
-        <ListItem>
-          <ListItemText primary="Developed the company’s mobile application with React Native." primaryTypographyProps={{ style: { color: 'white', fontWeight:"600" } }} />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Translated UI’s into functional and responsive mobile and web frontends." primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Developed web applications using React-js, Next-js, and Redux." primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Developed web applications using React-js, Next-js, and Redux." primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Led bug fixes, improving platform stability and performance on Odoo." primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-      </List>
-    </TabPanel>
-    <TabPanel value={value} index={1}>
-      <Typography variant="h6" sx={{ color: 'white' }}>Role Title Two</Typography>
-      <Typography variant="subtitle1" sx={{ color: 'white' }}>Year Period: 2021 - 2022</Typography>
-      <List>
-        <ListItem>
-          <ListItemText primary="Bullet point one for Company Two" primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Bullet point two for Company Two" primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Bullet point three for Company Two" primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-      </List>
-    </TabPanel>
-    <TabPanel value={value} index={2}>
-      <Typography variant="h6" sx={{ color: 'white' }}>Role Title Three</Typography>
-      <Typography variant="subtitle1" sx={{ color: 'white' }}>Year Period: 2022 - 2023</Typography>
-      <List>
-        <ListItem>
-          <ListItemText primary="Bullet point one for Company Three" primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Bullet point two for Company Three" primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Bullet point three for Company Three" primaryTypographyProps={{ style: { color: 'white' } }} />
-        </ListItem>
-      </List>
-    </TabPanel>
-  </Box>
+      <Tabs
+        orientation={isSmallScreen ? "horizontal" : "vertical"}
+        variant="scrollable"
+        scrollButtons="auto"
+        allowScrollButtonsMobile
+        value={value}
+        onChange={handleChange}
+        aria-label="Vertical tabs example"
+        sx={{
+          borderRight: !isSmallScreen ? 1 : 0,
+          borderColor: "divider",
+          minWidth: !isSmallScreen ? "200px" : "auto",
+          color: "white",
+          flexDirection: isSmallScreen ? "row" : "column", // Ensure correct flex direction
+        }}
+      >
+        <Tab
+          label="SokoFresh Agri Innovation EA"
+          {...a11yProps(0)}
+          sx={{
+            color: "white",
+            fontSize: { xs: "17px", sm: "20px" },
+            fontWeight: "600",
+            textTransform: "none",
+          }}
+        />
+        <Tab
+          label="Ngeni Labs - ngeni.io"
+          {...a11yProps(1)}
+          sx={{
+            color: "white",
+            fontSize: { xs: "17px", sm: "20px" },
+            fontWeight: "600",
+            textTransform: "none",
+          }}
+        />
+        <Tab
+          label="AIfluence Inc"
+          {...a11yProps(2)}
+          sx={{
+            color: "white",
+            fontSize: { xs: "17px", sm: "20px" },
+            fontWeight: "600",
+            textTransform: "none",
+          }}
+        />
+      </Tabs>
 
-  )}  
+      <TabPanel value={value} index={0}>
+        <Typography
+          sx={{
+            color: "white",
+            fontWeight: "800",
+            fontSize: { xs: "23px", sm: "28px" },
+          }}
+        >
+          Software Engineer - FrontEnd
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ color: "white", marginBottom: "16px", fontStyle: "italic" }}
+        >
+          Jun 2023 - Present
+        </Typography>
+        <List sx={{ padding: 0 }}>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Developed the company’s mobile application with React Native.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Translated UI’s into functional and responsive mobile and web
+              frontends.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Developed web applications using React-js, Next-js, and Redux.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Developed web applications using React-js, Next-js, and Redux.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Led bug fixes, improving platform stability and performance on
+              Odoo.
+            </Typography>
+          </ListItem>
+        </List>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <Typography
+          sx={{
+            color: "white",
+            fontWeight: "800",
+            fontSize: { xs: "23px", sm: "28px" },
+          }}
+        >
+          Software Engineer
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ color: "white", marginBottom: "16px", fontStyle: "italic" }}
+        >
+          Aug 2022 - May 2023
+        </Typography>
+        <List sx={{ padding: 0 }}>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Played a pivotal role in a Web3 company, developing frontends
+              with ReactJS and Ethers.js.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Developed user interfaces to consume smart contracts and enhance
+              functionality.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Conducted thorough debugging to ensure seamless and error-free
+              user experiences.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Contributed to usability testing, gathering valuable insights to
+              refine applications.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Managed and maintained websites, ensuring timely updates and
+              content enhancements to meet client requirements.
+            </Typography>
+          </ListItem>
+        </List>
+      </TabPanel>
+
+      <TabPanel value={value} index={2}>
+        <Typography
+          sx={{
+            color: "white",
+            fontWeight: "800",
+            fontSize: { xs: "23px", sm: "28px" },
+          }}
+        >
+          IT Technical Support Associate
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ color: "white", marginBottom: "16px", fontStyle: "italic" }}
+        >
+          Jan 2022 - May 2022
+        </Typography>
+        <List sx={{ padding: 0 }}>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Digital mapping of influencers to further the company's
+              influencer marketing efforts.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Translated UI’s into functional and responsive mobile and web
+              frontends.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Tested new technology systems and provided recommendations for
+              purchases and changes in design, security, software, and hardware.
+            </Typography>
+          </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white" }}>
+              - Modifying user interfaces for the Yaga campaign to optimize user
+              experience
+            </Typography>
+          </ListItem>
+        </List>
+      </TabPanel>
+    </Box>
+  );
+}

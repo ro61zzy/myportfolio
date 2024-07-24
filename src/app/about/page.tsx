@@ -70,13 +70,7 @@ const About = () => {
               }}
             >
               <Typography sx={{ fontSize: "20px", fontWeight: "500" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Experienced full-stack developer with a strong foundation in Web2 technologies, focusing on web and mobile applications. Skilled in UI/UX development, creating responsive and user-friendly interfaces. Currently transitioning into Web3, with knowledge of Ethers.js, Viem, and Solidity. Adept at working in collaborative environments, integrating APIs, and refining applications based on user feedback. Passionate about leveraging technology to drive innovation and deliver robust, scalable solutions.
               </Typography>
             </Box>
           </Box>
