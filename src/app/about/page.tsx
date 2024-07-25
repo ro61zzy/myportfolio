@@ -25,7 +25,7 @@ const About = () => {
       >
         <Box
           sx={{
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
             padding: "1rem 2rem",
             width: "100%",
           }}
@@ -34,7 +34,8 @@ const About = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              flexDirection:{xs:"column", sm:"column", md:"row"},
+              justifyContent: "center",
+              flexDirection: { xs: "column", sm: "column", md: "row" },
               gap: "2rem",
               p: "2rem",
             }}
@@ -65,12 +66,33 @@ const About = () => {
             </Box>
             <Box
               sx={{
-                backgroundColor: "#fff",
+                // backgroundColor: "#fff",
                 p: "1rem",
+                width: "70%",
               }}
             >
-              <Typography sx={{ fontSize: "20px", fontWeight: "500" }}>
-              Experienced full-stack developer with a strong foundation in Web2 technologies, focusing on web and mobile applications. Skilled in UI/UX development, creating responsive and user-friendly interfaces. Currently transitioning into Web3, with knowledge of Ethers.js, Viem, and Solidity. Adept at working in collaborative environments, integrating APIs, and refining applications based on user feedback. Passionate about leveraging technology to drive innovation and deliver robust, scalable solutions.
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "20px",
+                    sm: "18px,",
+                    md: "17px",
+                    lg: "22px",
+                    xl: "30px",
+                  },
+                  fontWeight: "500",
+                  color: "#fff",
+                }}
+              >
+                Experienced full-stack developer with a strong foundation in
+                Web2 technologies, focusing on web and mobile applications.
+                Skilled in UI/UX development, creating responsive and
+                user-friendly interfaces. Currently transitioning into Web3,
+                with knowledge of Ethers.js, Viem, and Solidity. Adept at
+                working in collaborative environments, integrating APIs, and
+                refining applications based on user feedback. Passionate about
+                leveraging technology to drive innovation and deliver robust,
+                scalable solutions.
               </Typography>
             </Box>
           </Box>
@@ -80,36 +102,36 @@ const About = () => {
                 color: "#fff",
                 fontWeight: "700",
                 fontSize: { xs: "", sm: "25px" },
-                pb:"1rem"
+                pb: "1rem",
               }}
             >
               Languages and Tools
             </Typography>
-           <Tools />
+            <Tools />
           </Box>
-          <Box sx={{pt:"2.8rem"}}>
-          <Typography
+          <Box sx={{ pt: "2.8rem" }}>
+            <Typography
               sx={{
                 color: "#fff",
                 fontWeight: "700",
                 fontSize: { xs: "", sm: "25px" },
-                pb:"1rem"
+                pb: "1rem",
               }}
             >
               Certificates
             </Typography>
             <Certificates />
           </Box>
-          <Box sx={{pt:"2.8rem"}}>
-          <Typography
+          <Box sx={{ pt: "2.8rem" }}>
+            <Typography
               sx={{
                 color: "#fff",
                 fontWeight: "700",
                 fontSize: { xs: "", sm: "25px" },
-                pb:"1rem"
+                pb: "1rem",
               }}
             >
-             Skills
+              Skills
             </Typography>
             <Skills />
           </Box>

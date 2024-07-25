@@ -70,7 +70,7 @@ export default function VerticalTabs() {
         sx={{
           borderRight: !isSmallScreen ? 1 : 0,
           borderColor: "divider",
-          minWidth: !isSmallScreen ? "200px" : "auto",
+          minWidth: !isSmallScreen ? "300px" : "auto",
           color: "white",
           flexDirection: isSmallScreen ? "row" : "column", // Ensure correct flex direction
         }}
@@ -80,7 +80,7 @@ export default function VerticalTabs() {
           {...a11yProps(0)}
           sx={{
             color: "white",
-            fontSize: { xs: "17px", sm: "20px" },
+            fontSize: { xs: "17px", sm: "20px", lg: "30px", xl: "50px" },
             fontWeight: "600",
             textTransform: "none",
           }}
@@ -90,7 +90,7 @@ export default function VerticalTabs() {
           {...a11yProps(1)}
           sx={{
             color: "white",
-            fontSize: { xs: "17px", sm: "20px" },
+            fontSize: { xs: "17px", sm: "20px", xl: "45px" },
             fontWeight: "600",
             textTransform: "none",
           }}
@@ -100,7 +100,7 @@ export default function VerticalTabs() {
           {...a11yProps(2)}
           sx={{
             color: "white",
-            fontSize: { xs: "17px", sm: "20px" },
+            fontSize: { xs: "17px", sm: "20px", xl: "45px" },
             fontWeight: "600",
             textTransform: "none",
           }}
@@ -112,43 +112,62 @@ export default function VerticalTabs() {
           sx={{
             color: "white",
             fontWeight: "800",
-            fontSize: { xs: "23px", sm: "28px" },
+            fontSize: { xs: "23px", sm: "28px", xl: "75px" },
           }}
         >
           Software Engineer - FrontEnd
         </Typography>
         <Typography
           variant="subtitle1"
-          sx={{ color: "white", marginBottom: "16px", fontStyle: "italic" }}
+          sx={{
+            color: "white",
+            marginBottom: "16px",
+            fontStyle: "italic",
+            fontSize: { xs: "12px", xl: "30px" },
+          }}
         >
           Jun 2023 - Present
         </Typography>
         <List sx={{ padding: 0 }}>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
-              - Developed the company’s mobile application with React Native.
+            <Typography
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+            >
+              - Developed a mobile application using React Native for managing
+              trades and orders, significantly enhancing operational efficiency.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
-              - Translated UI’s into functional and responsive mobile and web
-              frontends.
+            <Typography
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+            >
+              - Translated UI designs into functional, responsive mobile and web
+              frontends, ensuring a seamless user experience.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
-              - Developed web applications using React-js, Next-js, and Redux.
+            <Typography
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+            >
+              - Led the development of a full-stack web application for tracking
+              employee tickets, utilizing TypeScript, Next.js, PostgreSQL, and
+              Prisma to deliver robust solutions.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
-              - Developed web applications using React-js, Next-js, and Redux.
+            <Typography
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+            >
+              - Built web applications using React.js, Next.js, and Redux,
+              contributing to the company's digital transformation.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
-              - Led bug fixes, improving platform stability and performance on
-              Odoo.
+            <Typography
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+            >
+              - Perfomed bug fixes, improving platform stability and performance
+              on Odoo ERP modules.
             </Typography>
           </ListItem>
         </List>
