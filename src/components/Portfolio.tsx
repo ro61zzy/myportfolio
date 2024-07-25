@@ -46,30 +46,7 @@ const projects = [
     liveUrl: "https://green-thumb-pi.vercel.app/",
     codeUrl: "#",
   },
-  {
-    title: "Project 7",
-    image: "/images/project7.png",
-    liveUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "Project 8",
-    image: "/images/project8.png",
-    liveUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "Project 9",
-    image: "/images/project9.png",
-    liveUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "Project 10",
-    image: "/images/project10.png",
-    liveUrl: "#",
-    codeUrl: "#",
-  },
+ 
 ];
 
 const Portfolio = () => {

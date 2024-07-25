@@ -19,7 +19,7 @@ const Portfoli = () => {
       <Box
         sx={{
           backgroundColor: "rgba(0, 0, 0, 0.8)",
-          padding:{xs:"1rem 1rem",sm: "1rem 2rem",md:"2.5rem 2rem", xl:"10rem"},
+          padding:{xs:"1rem 1rem",sm: "1rem 2rem",md:"2.5rem 2rem", xl:"7rem 2rem"},
           width: "100%",
         //   height:"80vh"
         }}
