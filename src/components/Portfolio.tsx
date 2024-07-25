@@ -12,7 +12,7 @@ import React from "react";
 const projects = [
   {
     title: "New Project",
-    image: "/portfolio/pivot.png",
+    image: "/portfolio/coming.png",
     liveUrl: "/portfolio",
     codeUrl: "/portfolio",
   },
@@ -24,26 +24,26 @@ const projects = [
   },
   {
     title: "Techist Hub",
-    image: "/portfolio/techist",
+    image: "/portfolio/techist.png",
     liveUrl: "https://techist.netlify.app/",
     codeUrl: "#",
   },
   {
     title: "Fit Peoples Gym",
-    image: "/images/project4.png",
+    image: "/portfolio/fittgym.png",
     liveUrl: "https://fittgym.netlify.app/",
     codeUrl: "#",
   },
   {
     title: "Bagpackers Association",
-    image: "/images/project5.png",
+    image: "/portfolio/bagpackers.png",
     liveUrl: "https://baggpack.netlify.app/",
     codeUrl: "#",
   },
   {
-    title: "Project 6",
-    image: "/images/project6.png",
-    liveUrl: "#",
+    title: "Greenthumbing for plant mom",
+    image: "/portfolio/greenthumb.png",
+    liveUrl: "https://green-thumb-pi.vercel.app/",
     codeUrl: "#",
   },
   {
