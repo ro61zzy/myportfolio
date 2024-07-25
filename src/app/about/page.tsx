@@ -18,14 +18,14 @@ const About = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          p: { xs: "5rem 1rem ", sm: "8rem 9%" },
+          p: { xs: "5rem 1rem ", sm: "6rem 9% 2rem 9%" },
           height: "100vh",
           overflowY: "auto",
         }}
       >
         <Box
           sx={{
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            backgroundColor: "rgba(0, 0, 0, 0.8)",
             padding: "1rem 2rem",
             width: "100%",
           }}
@@ -36,8 +36,8 @@ const About = () => {
               alignItems: "center",
               justifyContent: "center",
               flexDirection: { xs: "column", sm: "column", md: "row" },
-              gap: "2rem",
-              p: "2rem",
+              gap: {xs:"10px",sm:"2rem"},
+              p:{xs:"10px",sm:"2rem"},
             }}
           >
             <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -67,8 +67,8 @@ const About = () => {
             <Box
               sx={{
                 // backgroundColor: "#fff",
-                p: "1rem",
-                width: "70%",
+                p:{xs:"1px", sm:"1rem"},
+                width: {xs:"100%",sm:"70%"},
               }}
             >
               <Typography
@@ -101,8 +101,8 @@ const About = () => {
               sx={{
                 color: "#fff",
                 fontWeight: "700",
-                fontSize: { xs: "", sm: "25px" },
-                pb: "1rem",
+                fontSize: { xs: "20px", sm: "25px" },
+                p: "1rem 1px",
               }}
             >
               Languages and Tools
@@ -114,7 +114,7 @@ const About = () => {
               sx={{
                 color: "#fff",
                 fontWeight: "700",
-                fontSize: { xs: "", sm: "25px" },
+                fontSize: { xs: "20px", sm: "25px" },
                 pb: "1rem",
               }}
             >
@@ -127,7 +127,7 @@ const About = () => {
               sx={{
                 color: "#fff",
                 fontWeight: "700",
-                fontSize: { xs: "", sm: "25px" },
+                fontSize: { xs: "20px", sm: "25px" },
                 pb: "1rem",
               }}
             >

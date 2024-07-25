@@ -97,7 +97,7 @@ export default function DrawerAppBar({ window, pathname }: Props) { // Destructu
             }}
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography sx={{ fontSize: { xs: "30px", sm: "60px" }, color: "#720404", fontWeight: "600" }}>
+              <Typography sx={{ fontSize: { xs: "35px", sm: "50px", xl:"75px" }, color: "#720404", fontWeight: "600" }}>
                 Rose Wachuka
               </Typography>
             </Box>
@@ -125,8 +125,8 @@ export default function DrawerAppBar({ window, pathname }: Props) { // Destructu
                       sx={{
                         color: "#000",
                         fontFamily: "Jacques Francois",
-                        fontWeight: 400,
-                        fontSize: { xs: "13px", sm: "20px" },
+                        fontWeight: 600,
+                        fontSize: { xs: "13px", sm: "20px", xl:"45px" },
                         textTransform: "capitalize",
                       }}
                     >
