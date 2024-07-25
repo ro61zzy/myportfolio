@@ -1,8 +1,13 @@
 "use client";
 
-import { Box, Divider } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
-import Portfolio from "@/components/Portfolio";
+import XIcon from "@mui/icons-material/X";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import Image from "next/image";
+import discord from '../../../public/socials/discord.png'
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Contact = () => {
   return (
@@ -29,9 +34,35 @@ const Contact = () => {
           //   height:"80vh"
         }}
       >
-        <Box sx={{display:"flex", flexDirection:{xs:"column", sm:"row"}}}>
-          <Box sx={{display:"flex", flexDirection:"column"}}>
-
+        <Box
+          sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" } }}
+        >
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <Typography
+              sx={{ color: "#fff", fontWeight: "600", fontSize: "20px" }}
+            >
+              Profiles:
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              <XIcon sx={{ color: "#fff", fontSize: "30px" }} />
+              <LinkedInIcon sx={{ color: "#fff", fontSize: "35px" }} />
+              <TelegramIcon sx={{ color: "#fff", fontSize: "35px" }} />
+              <Image
+                src={discord}
+                alt="discord"
+                width={50}
+                height={50}
+                // quality={100}
+                // style={{ borderRadius: "50%" }}
+              />
+              <GitHubIcon sx={{ color: "#fff", fontSize: "35px" }} />
+            </Box>
           </Box>
           <Divider
             orientation="vertical"
