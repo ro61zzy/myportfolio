@@ -6,15 +6,20 @@ const ContactForm = () => {
     <Box sx={{ p: "1rem" }}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         <TextField
-          id="email"
+          id="name"
           label="Your Name"
           type="text"
           variant="outlined"
           fullWidth
           required
+          InputProps={{
+            style: { color: "#fff" }
+          }}
+          InputLabelProps={{
+            style: { color: "#fff" }
+          }}
           sx={{
             backgroundColor: "#5E5A5A",
-            color: "#fff",
           }}
         />
         <TextField
@@ -24,21 +29,31 @@ const ContactForm = () => {
           variant="outlined"
           fullWidth
           required
+          InputProps={{
+            style: { color: "#fff" }
+          }}
+          InputLabelProps={{
+            style: { color: "#fff" }
+          }}
           sx={{
             backgroundColor: "#5E5A5A",
-            color: "#fff",
           }}
         />
         <TextField
-          id="email"
+          id="subject"
           label="Subject"
           type="text"
           variant="outlined"
           fullWidth
           required
+          InputProps={{
+            style: { color: "#fff" }
+          }}
+          InputLabelProps={{
+            style: { color: "#fff" }
+          }}
           sx={{
             backgroundColor: "#5E5A5A",
-            color: "#fff",
           }}
         />
         <TextField
@@ -49,9 +64,14 @@ const ContactForm = () => {
           variant="outlined"
           fullWidth
           required
+          InputProps={{
+            style: { color: "#fff" }
+          }}
+          InputLabelProps={{
+            style: { color: "#fff" }
+          }}
           sx={{
             backgroundColor: "#5E5A5A",
-            color: "#fff",
           }}
         />
         <Button

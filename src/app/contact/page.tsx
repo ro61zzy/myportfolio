@@ -9,6 +9,7 @@ import Image from "next/image";
 import discord from "../../../public/socials/discord.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ContactForm from "@/components/ContactForm";
+import EmailIcon from '@mui/icons-material/Email';
 
 const Contact = () => {
   return (
@@ -38,7 +39,7 @@ const Contact = () => {
         <Box
           sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, width:"100%", gap:"1rem" }}
         >
-          <Box sx={{ display: "flex", flexDirection: "column",  width: "50%", }}>
+          <Box sx={{ display: "flex", flexDirection: "column",  width: "50%",p:"5rem 1px" }}>
             <Typography
               sx={{ color: "#fff", fontWeight: "600", fontSize: "20px", pb:"15px" }}
             >
@@ -65,6 +66,11 @@ const Contact = () => {
                 // style={{ borderRadius: "50%" }}
               />
               <GitHubIcon sx={{ color: "#fff", fontSize: "35px" }} />
+            </Box>
+            <Typography  sx={{ color: "#fff", fontWeight: "600", fontSize: "20px", p:"15px 1px" }}>Email</Typography>
+            <Box sx={{display:"flex", alignItems:"center", gap:"1rem"}}>
+                <EmailIcon sx={{ color: "#fff", fontSize: "35px" }} />
+                <Typography  sx={{ color: "#fff", fontSize: "15px", }}>rosekaremeri@gmail.com</Typography>
             </Box>
           </Box>
           <Divider
