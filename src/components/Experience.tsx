@@ -70,7 +70,12 @@ export default function VerticalTabs() {
         sx={{
           borderRight: !isSmallScreen ? 1 : 0,
           borderColor: "divider",
-          minWidth: !isSmallScreen ? "300px" : "auto",
+          minWidth: {
+            xs: 'auto', 
+            sm: 'auto', 
+            md: '200px', 
+            lg: '400px'
+          },
           color: "white",
           flexDirection: isSmallScreen ? "row" : "column", // Ensure correct flex direction
         }}
@@ -80,7 +85,7 @@ export default function VerticalTabs() {
           {...a11yProps(0)}
           sx={{
             color: "white",
-            fontSize: { xs: "17px", sm: "20px", lg: "30px", xl: "50px" },
+            fontSize: { xs: "17px", sm: "20px", lg: "30px", xl: "40px" },
             fontWeight: "600",
             textTransform: "none",
           }}
@@ -90,7 +95,7 @@ export default function VerticalTabs() {
           {...a11yProps(1)}
           sx={{
             color: "white",
-            fontSize: { xs: "17px", sm: "20px", xl: "45px" },
+            fontSize: { xs: "17px", sm: "20px", lg: "30px", xl: "40px" },
             fontWeight: "600",
             textTransform: "none",
           }}
@@ -100,7 +105,7 @@ export default function VerticalTabs() {
           {...a11yProps(2)}
           sx={{
             color: "white",
-            fontSize: { xs: "17px", sm: "20px", xl: "45px" },
+            fontSize: { xs: "17px", sm: "20px", lg: "30px", xl: "40px" },
             fontWeight: "600",
             textTransform: "none",
           }}
@@ -112,15 +117,14 @@ export default function VerticalTabs() {
           sx={{
             color: "white",
             fontWeight: "800",
-            fontSize: { xs: "23px", sm: "28px", xl: "75px" },
+            fontSize: { xs: "20px", sm: "28px", xl: "75px" },
           }}
         >
           Software Engineer - FrontEnd
         </Typography>
         <Typography
-          variant="subtitle1"
           sx={{
-            color: "white",
+            color: "#fff",
             marginBottom: "16px",
             fontStyle: "italic",
             fontSize: { xs: "12px", xl: "30px" },
@@ -131,7 +135,7 @@ export default function VerticalTabs() {
         <List sx={{ padding: 0 }}>
           <ListItem disableGutters sx={{ padding: 0 }}>
             <Typography
-              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" } }}
             >
               - Developed a mobile application using React Native for managing
               trades and orders, significantly enhancing operational efficiency.
@@ -139,7 +143,7 @@ export default function VerticalTabs() {
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
             <Typography
-              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "40px"  } }}
             >
               - Translated UI designs into functional, responsive mobile and web
               frontends, ensuring a seamless user experience.
@@ -147,7 +151,7 @@ export default function VerticalTabs() {
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
             <Typography
-              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "40px"  } }}
             >
               - Led the development of a full-stack web application for tracking
               employee tickets, utilizing TypeScript, Next.js, PostgreSQL, and
@@ -156,7 +160,7 @@ export default function VerticalTabs() {
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
             <Typography
-              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" } }}
             >
               - Built web applications using React.js, Next.js, and Redux,
               contributing to the company's digital transformation.
@@ -164,7 +168,7 @@ export default function VerticalTabs() {
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
             <Typography
-              sx={{ color: "white", fontSize: { xs: "16px", xl: "44px" } }}
+              sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" } }}
             >
               - Perfomed bug fixes, improving platform stability and performance
               on Odoo ERP modules.
@@ -177,48 +181,53 @@ export default function VerticalTabs() {
           sx={{
             color: "white",
             fontWeight: "800",
-            fontSize: { xs: "23px", sm: "28px" },
+            fontSize: { xs: "23px", sm: "28px", xl: "75px" },
           }}
         >
           Software Engineer
         </Typography>
         <Typography
-          variant="subtitle1"
-          sx={{ color: "white", marginBottom: "16px", fontStyle: "italic" }}
+          sx={{ color: "#fff", marginBottom: "16px", fontStyle: "italic",  fontSize: { xs: "12px", xl: "30px" }, }}
         >
           Aug 2022 - May 2023
         </Typography>
         <List sx={{ padding: 0 }}>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" }}}>
               - Played a pivotal role in a Web3 company, developing frontends
-              with ReactJS and Ethers.js.
+              with ReactJS and Ethers.js to facilitate seamless interaction with smart contracts.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
-              - Developed user interfaces to consume smart contracts and enhance
-              functionality.
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" } }}>
+              - Created user interfaces to efficiently consume smart contracts and enhance overall application functionality.
+           
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px"} }}>
               - Conducted thorough debugging to ensure seamless and error-free
               user experiences.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px"} }}>
               - Contributed to usability testing, gathering valuable insights to
               refine applications.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px"} }}>
               - Managed and maintained websites, ensuring timely updates and
               content enhancements to meet client requirements.
             </Typography>
           </ListItem>
+          <ListItem disableGutters sx={{ padding: 0 }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" } }}>
+              -  Worked on Web3 side projects, developing decentralized applications and integrating blockchain technologies.
+            </Typography>
+          </ListItem>
+         
         </List>
       </TabPanel>
 
@@ -227,38 +236,38 @@ export default function VerticalTabs() {
           sx={{
             color: "white",
             fontWeight: "800",
-            fontSize: { xs: "23px", sm: "28px" },
+            fontSize: { xs: "23px", sm: "28px", xl: "75px" },
           }}
         >
           IT Technical Support Associate
         </Typography>
         <Typography
           variant="subtitle1"
-          sx={{ color: "white", marginBottom: "16px", fontStyle: "italic" }}
+          sx={{ color: "white", marginBottom: "16px", fontStyle: "italic", fontSize: { xs: "12px", xl: "30px" }, }}
         >
           Jan 2022 - May 2022
         </Typography>
         <List sx={{ padding: 0 }}>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" }  }}>
               - Digital mapping of influencers to further the company's
               influencer marketing efforts.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" }  }}>
               - Translated UI’s into functional and responsive mobile and web
               frontends.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" }  }}>
               - Tested new technology systems and provided recommendations for
               purchases and changes in design, security, software, and hardware.
             </Typography>
           </ListItem>
           <ListItem disableGutters sx={{ padding: 0 }}>
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", fontSize: { xs: "16px", xl: "40px" }  }}>
               - Modifying user interfaces for the Yaga campaign to optimize user
               experience
             </Typography>
