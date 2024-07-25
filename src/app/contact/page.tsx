@@ -10,8 +10,12 @@ import discord from "../../../public/socials/discord.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ContactForm from "@/components/ContactForm";
 import EmailIcon from "@mui/icons-material/Email";
+import skype from "../../../public/socials/skype.svg"
+import { useRouter } from "next/navigation";
 
 const Contact = () => {
+    const route = useRouter();
+
   return (
     <Box
       sx={{
@@ -72,9 +76,9 @@ const Contact = () => {
                   justifyContent: "space-evenly",
                 }}
               >
-                <XIcon sx={{ color: "#fff", fontSize: "30px" }} />
-                <LinkedInIcon sx={{ color: "#fff", fontSize: "35px" }} />
-                <TelegramIcon sx={{ color: "#fff", fontSize: "35px" }} />
+                <XIcon onClick={() => route.push("https://twitter.com/rosewachukak")} sx={{ color: "#fff", fontSize: "30px" }} />
+                <LinkedInIcon onClick={() => route.push("https://www.linkedin.com/in/rose-wachuka-6086861b1/")} sx={{ color: "#fff", fontSize: "35px" }} />
+                <TelegramIcon onClick={() => route.push("https://t.me/rozzyw")} sx={{ color: "#fff", fontSize: "35px" }} />
                 <Image
                   src={discord}
                   alt="discord"
@@ -82,8 +86,18 @@ const Contact = () => {
                   height={50}
                   // quality={100}
                   // style={{ borderRadius: "50%" }}
+                  onClick={() => route.push("https://github.com/ro61zzy")}
                 />
-                <GitHubIcon sx={{ color: "#fff", fontSize: "35px" }} />
+                <GitHubIcon onClick={() => route.push("https://github.com/ro61zzy")} sx={{ color: "#fff", fontSize: "35px" }} />
+                <Image
+                  src={skype}
+                  alt="discord"
+                  width={50}
+                  height={50}
+                  // quality={100}
+                  // style={{ borderRadius: "50%" }}
+                  onClick={() => route.push("https://github.com/ro61zzy")}
+                />
               </Box>
             </Box>
             <Box>
