@@ -6,8 +6,9 @@ import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import Image from "next/image";
-import discord from '../../../public/socials/discord.png'
-import GitHubIcon from '@mui/icons-material/GitHub';
+import discord from "../../../public/socials/discord.png";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (
@@ -35,11 +36,11 @@ const Contact = () => {
         }}
       >
         <Box
-          sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" } }}
+          sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, width:"100%", gap:"1rem" }}
         >
-          <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <Box sx={{ display: "flex", flexDirection: "column",  width: "50%", }}>
             <Typography
-              sx={{ color: "#fff", fontWeight: "600", fontSize: "20px" }}
+              sx={{ color: "#fff", fontWeight: "600", fontSize: "20px", pb:"15px" }}
             >
               Profiles:
             </Typography>
@@ -48,6 +49,8 @@ const Contact = () => {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                justifyContent:"space-evenly"
+               
               }}
             >
               <XIcon sx={{ color: "#fff", fontSize: "30px" }} />
@@ -69,9 +72,12 @@ const Contact = () => {
             flexItem
             sx={{
               display: { xs: "none", sm: "block" },
+              color:"#fff"
             }}
           />
-          <Box>Contact form</Box>
+          <Box sx={{ width: "50%" }}>
+            <ContactForm />
+          </Box>
         </Box>
       </Box>
     </Box>
