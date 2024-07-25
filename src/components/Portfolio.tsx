@@ -11,33 +11,33 @@ import React from "react";
 
 const projects = [
   {
-    title: "Project 1",
+    title: "New Project",
     image: "/portfolio/pivot.png",
-    liveUrl: "#",
-    codeUrl: "#",
+    liveUrl: "/portfolio",
+    codeUrl: "/portfolio",
   },
   {
-    title: "Project 2",
+    title: "Pivot works hr solutions",
     image: "/portfolio/pivot.png",
     liveUrl: "https://pivotworkshr.org/",
     codeUrl: "https://github.com/ro61zzy/Pivot_Works_Hr",
   },
   {
-    title: "Project 3",
-    image: "/images/project3.png",
-    liveUrl: "#",
+    title: "Techist Hub",
+    image: "/portfolio/techist",
+    liveUrl: "https://techist.netlify.app/",
     codeUrl: "#",
   },
   {
-    title: "Project 4",
+    title: "Fit Peoples Gym",
     image: "/images/project4.png",
-    liveUrl: "#",
+    liveUrl: "https://fittgym.netlify.app/",
     codeUrl: "#",
   },
   {
-    title: "Project 5",
+    title: "Bagpackers Association",
     image: "/images/project5.png",
-    liveUrl: "#",
+    liveUrl: "https://baggpack.netlify.app/",
     codeUrl: "#",
   },
   {
@@ -90,7 +90,7 @@ const Portfolio = () => {
           <Card
             key={index}
             sx={{
-              width: { xs: "95%", sm: "45%", md: "45%", lg: "30%" },
+              width: { xs: "95%", sm: "45%", md: "45%", lg: "40%", xl:"30%"},
               height: { xs: "200px", sm: "100px", md: "250px", lg: "360px" },
               position: "relative",
               "&:hover .cardActions": { opacity: 1 },
@@ -99,9 +99,10 @@ const Portfolio = () => {
             <CardMedia
               component="img"
               height="100%"
+              width="100%"
               image={project.image}
               alt={project.title}
-              sx={{ objectFit: "fit" }}
+              sx={{ objectFit: "cover" }}
             />
             {/* <CardContent>
               <Typography sx={{fontSize:{xs:"15px", sm:"20pxx"}}}>
@@ -122,17 +123,20 @@ const Portfolio = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: "1rem",
+                // gap: "1rem",
                 transition: "opacity 0.3s",
               }}
             >
               <Button
                 sx={{
-                  backgroundColor: "#901616",
-                  color: "#fff",
+                  //   backgroundColor: "#901616",
+                  color: "#901616",
                   p: { xs: "8px", sm: "10px" },
-                  width: { xs: "80%", sm: "60%" },
+                  //   width: { xs: "80%", sm: "60%" },
                   textTransform: "none",
+                  fontSize: { sx: "15px", sm: "20px" },
+                  fontWeight: 900,
+                  textDecoration: "underline",
                 }}
                 href={project.liveUrl}
                 target="_blank"
@@ -142,17 +146,20 @@ const Portfolio = () => {
               </Button>
               <Button
                 sx={{
-                  backgroundColor: "#901616",
-                  color: "#fff",
+                  //   backgroundColor: "#901616",
+                  color: "#901616",
                   p: { xs: "8px", sm: "10px" },
-                  width: { xs: "80%", sm: "60%" },
+                  //   width: { xs: "80%", sm: "60%" },
                   textTransform: "none",
+                  fontSize: { sx: "15px", sm: "20px" },
+                  fontWeight: 900,
+                  textDecoration: "underline",
                 }}
                 href={project.codeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                See Live Application
+                See Github Code
               </Button>
             </CardActions>
           </Card>
