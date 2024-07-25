@@ -9,7 +9,7 @@ import Image from "next/image";
 import discord from "../../../public/socials/discord.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ContactForm from "@/components/ContactForm";
-import EmailIcon from '@mui/icons-material/Email';
+import EmailIcon from "@mui/icons-material/Email";
 
 const Contact = () => {
   return (
@@ -37,40 +37,88 @@ const Contact = () => {
         }}
       >
         <Box
-          sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, width:"100%", gap:"1rem" }}
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            width: "100%",
+            gap: "1rem",
+          }}
         >
-          <Box sx={{ display: "flex", flexDirection: "column",  width: "50%",p:"5rem 1px" }}>
-            <Typography
-              sx={{ color: "#fff", fontWeight: "600", fontSize: "20px", pb:"15px" }}
-            >
-              Profiles:
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent:"space-evenly"
-               
-              }}
-            >
-              <XIcon sx={{ color: "#fff", fontSize: "30px" }} />
-              <LinkedInIcon sx={{ color: "#fff", fontSize: "35px" }} />
-              <TelegramIcon sx={{ color: "#fff", fontSize: "35px" }} />
-              <Image
-                src={discord}
-                alt="discord"
-                width={50}
-                height={50}
-                // quality={100}
-                // style={{ borderRadius: "50%" }}
-              />
-              <GitHubIcon sx={{ color: "#fff", fontSize: "35px" }} />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: "50%",
+              pt: "2rem",
+              gap:"12%"
+            }}
+          >
+            <Box>
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontWeight: "600",
+                  fontSize: "20px",
+                  pb: "15px",
+                }}
+              >
+                Profiles:
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                }}
+              >
+                <XIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                <LinkedInIcon sx={{ color: "#fff", fontSize: "35px" }} />
+                <TelegramIcon sx={{ color: "#fff", fontSize: "35px" }} />
+                <Image
+                  src={discord}
+                  alt="discord"
+                  width={50}
+                  height={50}
+                  // quality={100}
+                  // style={{ borderRadius: "50%" }}
+                />
+                <GitHubIcon sx={{ color: "#fff", fontSize: "35px" }} />
+              </Box>
             </Box>
-            <Typography  sx={{ color: "#fff", fontWeight: "600", fontSize: "20px", p:"15px 1px" }}>Email</Typography>
-            <Box sx={{display:"flex", alignItems:"center", gap:"1rem"}}>
+            <Box>
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontWeight: "600",
+                  fontSize: "20px",
+                  p: "15px 1px",
+                }}
+              >
+                Email
+              </Typography>
+              <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                 <EmailIcon sx={{ color: "#fff", fontSize: "35px" }} />
-                <Typography  sx={{ color: "#fff", fontSize: "15px", }}>rosekaremeri@gmail.com</Typography>
+                <Typography sx={{ color: "#fff", fontSize: "15px" }}>
+                  rosekaremeri@gmail.com
+                </Typography>
+              </Box>
+            </Box>
+            <Box>
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontWeight: "600",
+                  fontSize: "20px",
+                  p: "15px 1px",
+                }}
+              >
+                Time Zone
+              </Typography>
+              <Typography sx={{ color: "#fff", fontSize: "15px" }}>
+                {" "}
+                GMT +3{" "}
+              </Typography>
             </Box>
           </Box>
           <Divider
@@ -78,7 +126,7 @@ const Contact = () => {
             flexItem
             sx={{
               display: { xs: "none", sm: "block" },
-              color:"#fff"
+              color: "#fff",
             }}
           />
           <Box sx={{ width: "50%" }}>
