@@ -74,8 +74,8 @@ const About = () => {
               <Typography
                 sx={{
                   fontSize: {
-                    xs: "20px",
-                    sm: "18px,",
+                    // xs: "20px",
+                    // sm: "18px,",
                     md: "17px",
                     lg: "22px",
                     xl: "30px",

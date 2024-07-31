@@ -67,8 +67,8 @@ const Portfolio = () => {
           <Card
             key={index}
             sx={{
-              width: { xs: "95%", sm: "45%", md: "45%", lg: "40%", xl:"30%"},
-              height: { xs: "200px", sm: "100px", md: "250px", lg: "360px" },
+              width: { xs: "95%", md: "45%", lg: "40%", xl:"30%"},
+              height: { xs: "200px",  md: "250px", lg: "360px" },
               position: "relative",
               "&:hover .cardActions": { opacity: 1 },
             }}
