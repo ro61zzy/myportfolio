@@ -13,26 +13,33 @@ const Home = () => {
       <Box className={styles.content}>
         <Box className={styles.nameBox}>
           <Typography
-            sx={{ color: "#700202", fontWeight: "bold", fontSize: "100px" }}
+            sx={{
+              color: "#700202",
+              fontWeight: "bold",
+              fontSize: "90px",
+              borderBottom: "3px solid orange",
+            }}
           >
             Rose Wachuka
           </Typography>
         </Box>
         <Box className={styles.navbar}>
-          {["Home", "About", "Resume", "Portfolio", "Contact"].map((item, index) => {
-            const linkPath = `/${item.toLowerCase()}`;
-            const isActive = pathname === (item === "Home" ? "/" : linkPath);
+          {["Home", "About", "Resume", "Portfolio", "Contact"].map(
+            (item, index) => {
+              const linkPath = `/${item.toLowerCase()}`;
+              const isActive = pathname === (item === "Home" ? "/" : linkPath);
 
-            return (
-              <Link
-                key={index}
-                className={`${styles.link} ${isActive ? styles.active : ""}`}
-                href={item === "Home" ? "/" : linkPath}
-              >
-                {item}
-              </Link>
-            );
-          })}
+              return (
+                <Link
+                  key={index}
+                  className={`${styles.link} ${isActive ? styles.active : ""}`}
+                  href={item === "Home" ? "/" : linkPath}
+                >
+                  {item}
+                </Link>
+              );
+            }
+          )}
         </Box>
       </Box>
     </main>

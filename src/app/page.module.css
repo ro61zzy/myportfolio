@@ -22,7 +22,7 @@
 .navbar {
   display: flex;
   gap: 3rem;
-  margin-top: 20px; /* Space between name and navbar */
+  margin-top: 10px; /* Space between name and navbar */
   position: relative;
 
   animation: navbar-animation 2s forwards; /* Animation for navbar */
@@ -76,7 +76,7 @@
   bottom: -5px;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 6px;
   background-color: orange;
   transform: scaleX(0);
   transition: transform 0.3s ease;

@@ -51,7 +51,7 @@ export default function DrawerAppBar({ window, pathname }: Props) { // Destructu
             gap: "12px",
             padding: "10px 1px",
             textDecoration: "none",
-            borderBottom: pathname === item.path ? "2px solid blue" : "none", // Add underline if current page
+            borderBottom: pathname === item.path ? "6px solid orange" : "none", // Add underline if current page
           }}
         >
           {item.path === "/" && <HomeOutlinedIcon sx={{ color: "#20A8F4" }} />}
@@ -97,13 +97,14 @@ export default function DrawerAppBar({ window, pathname }: Props) { // Destructu
             }}
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography sx={{ fontSize: { xs: "35px", sm: "50px", xl:"75px" }, color: "#720404", fontWeight: "600" }}>
+              <Typography sx={{ fontSize: { xs: "35px", sm: "50px", xl:"75px" }, color: "#720404", fontWeight: "600",  }}>
                 Rose Wachuka
               </Typography>
             </Box>
             <Box
               sx={{
                 display: "flex",
+            
               }}
             >
               <Box sx={{ display: { xs: "none", sm: "flex" } }}>
@@ -115,10 +116,10 @@ export default function DrawerAppBar({ window, pathname }: Props) { // Destructu
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      gap: "12px",
+                      // gap: "2rem",
                       // padding: "1px 1px",
                       textDecoration: "none",
-                      borderBottom: pathname === item.path ? "2px solid blue" : "none", // Add underline if current page
+                      borderBottom: pathname === item.path ? "6px solid orange" : "none", // Add underline if current page
                     }}
                   >
                     <Button
