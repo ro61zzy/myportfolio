@@ -120,7 +120,7 @@ export default function VerticalTabs() {
             fontSize: { xs: "20px", sm: "28px", xl: "75px" },
           }}
         >
-          Software Engineer - FrontEnd
+          Software Engineer
         </Typography>
         <Typography
           sx={{

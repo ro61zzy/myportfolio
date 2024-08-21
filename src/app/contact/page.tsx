@@ -52,7 +52,7 @@ const Contact = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              width: "50%",
+              width:{ xs:"100%",sm:"50%" },
               pt: "2rem",
               gap:"12%"
             }}
@@ -143,7 +143,7 @@ const Contact = () => {
               color: "#fff",
             }}
           />
-          <Box sx={{ width: "50%" }}>
+          <Box sx={{ width:{ xs:"100%",sm:"50%" }}}>
             <ContactForm />
           </Box>
         </Box>
