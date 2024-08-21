@@ -91,7 +91,7 @@ export default function VerticalTabs() {
           }}
         />
         <Tab
-          label="Ngeni Labs - ngeni.io"
+          label="Ngeni Labs"
           {...a11yProps(1)}
           sx={{
             color: "white",
