@@ -10,28 +10,30 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
-      <Box className={styles.nameBox}>
-        <Typography
-          sx={{ color: "#700202", fontWeight: "bold", fontSize: "100px" }}
-        >
-          Rose Wachuka
-        </Typography>
-      </Box>
-      <Box className={styles.navbar}>
-        {["Home", "About", "Resume", "Portfolio", "Contact"].map((item, index) => {
-          const linkPath = `/${item.toLowerCase()}`;
-          const isActive = pathname === (item === "Home" ? "/" : linkPath);
+      <Box className={styles.content}>
+        <Box className={styles.nameBox}>
+          <Typography
+            sx={{ color: "#700202", fontWeight: "bold", fontSize: "100px" }}
+          >
+            Rose Wachuka
+          </Typography>
+        </Box>
+        <Box className={styles.navbar}>
+          {["Home", "About", "Resume", "Portfolio", "Contact"].map((item, index) => {
+            const linkPath = `/${item.toLowerCase()}`;
+            const isActive = pathname === (item === "Home" ? "/" : linkPath);
 
-          return (
-            <Link
-              key={index}
-              className={`${styles.link} ${isActive ? styles.active : ""}`}
-              href={item === "Home" ? "/" : linkPath}
-            >
-              {item}
-            </Link>
-          );
-        })}
+            return (
+              <Link
+                key={index}
+                className={`${styles.link} ${isActive ? styles.active : ""}`}
+                href={item === "Home" ? "/" : linkPath}
+              >
+                {item}
+              </Link>
+            );
+          })}
+        </Box>
       </Box>
     </main>
   );
