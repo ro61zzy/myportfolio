@@ -37,6 +37,17 @@
   position: relative;
 }
 
+.navbar {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: none !important;
+  }
+}
+
+
 @keyframes navbar-animation {
   from {
     transform: translateY(300px); /* Start from below */

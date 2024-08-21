@@ -51,10 +51,10 @@ export default function DrawerAppBar({ window, pathname }: Props) { // Destructu
             gap: "12px",
             padding: "10px 1px",
             textDecoration: "none",
-            borderBottom: pathname === item.path ? "6px solid orange" : "none", // Add underline if current page
+            borderBottom: pathname === item.path ? "4px solid orange" : "none", // Add underline if current page
           }}
         >
-          {item.path === "/" && <HomeOutlinedIcon sx={{ color: "#20A8F4" }} />}
+     
           <Button
             sx={{
               color: "#000",
