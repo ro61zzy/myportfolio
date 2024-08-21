@@ -112,7 +112,7 @@ const Skills = () => {
               color: "#10BBE0",
             }}
           >
-            Responsibility
+           Leadership
           </Typography>
         </Box>
     </Box>

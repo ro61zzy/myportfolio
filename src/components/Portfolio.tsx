@@ -17,6 +17,12 @@ const projects = [
     codeUrl: "/portfolio",
   },
   {
+    title: "Coffee Shop",
+    image: "/portfolio/coffee.png",
+    liveUrl: "/portfolio",
+    codeUrl: "https://github.com/ro61zzy/coffee_shop",
+  },
+  {
     title: "Pivot works hr solutions",
     image: "/portfolio/pivot.png",
     liveUrl: "https://pivotworkshr.org/",
