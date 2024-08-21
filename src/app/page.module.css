@@ -3,32 +3,33 @@
   justify-content: flex-start; /* Align content to the left */
   align-items: center;
   min-height: 100vh;
-  padding-left: 10%; /* Adjust the left padding to control how far from the left edge it should be */
+  padding-left: 10%; /* Control how far from the left edge */
 }
 
 .content {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Ensure the items are aligned to the left */
-  animation: content-animation 2s forwards;
+  align-items: flex-start; /* Align items to the left */
 }
 
 .nameBox {
   position: relative;
   z-index: 1; /* Ensure the name is on top of the navbar */
-  animation: nameBox-animation 2s forwards;
+  animation: nameBox-animation 2s forwards; /* Animation for nameBox */
 }
 
 .navbar {
   display: flex;
   gap: 3rem;
-  margin-top: 20px; /* Adjust the spacing between the name and the navbar */
-  animation: navbar-animation 2s forwards;
+  margin-top: 20px; /* Space between name and navbar */
+  position: relative;
+
+  animation: navbar-animation 2s forwards; /* Animation for navbar */
 }
 
 .link {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-size: 30px;
   font-weight: 800;
@@ -36,20 +37,24 @@
 }
 
 @keyframes navbar-animation {
+  from {
+    transform: translateY(300px); /* Start from below */
+    opacity: 0;
+  }
   to {
-    transform: translateY(0);
+    transform: translateY(0); /* End at original position */
+    opacity: 1;
   }
 }
 
 @keyframes nameBox-animation {
-  to {
-    transform: translateY(0);
+  from {
+    transform: translateY(-300px); /* Start from above */
+    opacity: 0;
   }
-}
-
-@keyframes content-animation {
   to {
-    transform: translateX(0);
+    transform: translateY(0); /* End at original position */
+    opacity: 1;
   }
 }
 
