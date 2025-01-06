@@ -118,7 +118,7 @@ const ExperienceTimeline = () => {
 
             {index < experiences.length - 1 && (
               <Grid item xs={12} sx={{ display: { xs: "block", sm: "none" }, paddingTop: 2 }}>
-                <Divider sx={{ backgroundColor: "white" }} />
+                <Divider sx={{ backgroundColor: "grey" }} />
               </Grid>
             )}
           </Grid>

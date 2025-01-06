@@ -25,7 +25,7 @@ const About = () => {
       >
         <Box
           sx={{
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
             padding: "1rem 2rem",
             width: "100%",
           }}
