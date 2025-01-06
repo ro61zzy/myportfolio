@@ -11,7 +11,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 const ExperienceTimeline = () => {
   const experiences = [
     {
-      company: "SokoFresh Agri Innovation EA",
+      company: "SokoFresh Agri Innovation-EA",
       years: "Jun 2023 - Present",
       role: "Software Engineer",
       details: [
