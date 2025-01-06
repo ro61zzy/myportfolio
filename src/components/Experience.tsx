@@ -55,36 +55,39 @@ const ExperienceTimeline = () => {
           <Grid container key={index} alignItems="center" spacing={2}>
             {/* Left Column */}
             <Grid item xs={12} md={3}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'white' }}>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'white', fontSize:"25px" }}>
                 {experience.company}
               </Typography>
-              <Typography variant="body2" sx={{ color: 'white' }}>
+              <Typography variant="body2" sx={{ color: 'white', fontSize:"22px" }}>
                 {experience.years}
               </Typography>
-              <Typography variant="body2" sx={{ color: 'white' }}>
+              <Typography variant="body2" sx={{ color: 'white', fontSize:"20px" }}>
                 {experience.role}
               </Typography>
             </Grid>
 
             {/* Middle Column (Timeline) */}
             <Grid item xs={12} md={1}>
-              <Timeline position="alternate">
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot color="primary" />
-                    {index < experiences.length - 1 && <TimelineConnector />}
-                  </TimelineSeparator>
-                  <TimelineContent />
-                </TimelineItem>
-              </Timeline>
-            </Grid>
+  <Timeline position="alternate">
+    <TimelineItem>
+      <TimelineSeparator>
+        <TimelineDot color="primary" />
+        {index < experiences.length - 1 && (
+          <TimelineConnector sx={{ height: '200px' }} /> 
+        )}
+      </TimelineSeparator>
+      <TimelineContent />
+    </TimelineItem>
+  </Timeline>
+</Grid>
+
 
             {/* Right Column (Details) */}
             <Grid item xs={12} md={8}>
-  <ul style={{ listStyleType: 'disc', paddingLeft: '20px', color: 'white' }}>
+  <ul style={{ listStyleType: 'disc', paddingLeft: '20px', paddingTop:"20px", color: 'white' }}>
     {experience.details.map((detail, i) => (
       <li key={i}>
-        <Typography variant="body2" sx={{ color: 'white' }}>
+        <Typography variant="body2" sx={{ color: 'white', fontSize:"22px" }}>
           {detail}
         </Typography>
       </li>
