@@ -1,6 +1,7 @@
 import { navItems } from "@/lib/constants";
 import Link from "next/link";
 import React from "react";
+import Themetoggle from "./ThemeToggle";
 
 export default function Navigation() {
   return (
@@ -14,6 +15,7 @@ export default function Navigation() {
           </div>
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map(item=>(<Link href={item.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">{item.name}</Link>))}
+            <Themetoggle />
           </div>
         </div>
       </div>

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Space_Mono, Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
+
+
 
 const spaceMono = Space_Mono({
   variable: "--font-space",
@@ -26,9 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
     <body className={`${inter.variable} ${spaceMono.variable} ${playfair.variable}`}>
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
       </body>
     </html>
   );
