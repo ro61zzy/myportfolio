@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Mono, Playfair_Display } from "next/font/google";
+import { Space_Mono, Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
 const spaceMono = Space_Mono({
@@ -13,6 +13,7 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const inter = Inter({subsets: ["latin"], variable: "--font-inter"})
 
 export const metadata: Metadata = {
   title: "Rose Wachuka",
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`${spaceMono.className} ${playfair.className}`}>
+    <body className={`${inter.variable} ${spaceMono.variable} ${playfair.variable}`}>
         {children}
       </body>
     </html>
