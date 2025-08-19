@@ -3,6 +3,7 @@ import { Space_Mono, Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Navigation from "@/components/Navigation";
+import SocialsBar from "@/components/SocialsBar";
 
 
 
@@ -40,6 +41,7 @@ export default function RootLayout({
           >
               <Navigation />
             {children}
+             <SocialsBar />
           </ThemeProvider>
       </body>
     </html>

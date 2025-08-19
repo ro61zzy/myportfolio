@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
+import Skills from "@/components/SkillsSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     
       <main>
         <HeroSection />
+        <Skills />
       </main>
     </div>
   );

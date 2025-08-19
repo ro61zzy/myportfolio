@@ -51,9 +51,12 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen text-center md:text-left overflow-hidden font-mono px-4 md:px-12">
-      <div className="flex-1 max-w-2xl">
-        <h1 className="text-2xl text-gray-400">
+      <div className="flex-2 max-w-xl md:max-w-4xl lg:max-w-xl">
+        <h1 className="text-xl text-gray-400">
           Hi, welcome and nice to meet you.
+        </h1>
+        <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          Hi, I am <span className="text-green-400">Rose Wachuka</span>.
         </h1>
         <h2 className="mt-4 text-3xl font-bold">
           I&apos;m a <span className="dynamic-role text-green-400"></span>
@@ -67,11 +70,12 @@ export default function HeroSection() {
 
       {/* Tarantula profile photo */}
       <div className="flex-1 hidden md:flex items-center justify-center ">
-        <img
-          src="/taran.png"
-          alt="Ms. Tarantula as a hero image"
-          className="w-full max-w-md object-contain"
-        />
+     <img
+  src="/taran.png"
+  alt="Ms. Tarantula as a hero image"
+  className="w-full max-w-xl object-contain"
+/>
+
       </div>
     </section>
   );
