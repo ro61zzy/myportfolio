@@ -50,7 +50,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen text-center md:text-left overflow-hidden font-mono px-4 md:px-12">
+    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-120 pt-35 pb-20 text-center md:text-left overflow-hidden font-mono px-4 md:px-12">
       <div className="flex-2 max-w-xl md:max-w-4xl lg:max-w-xl">
         <h1 className="text-xl text-gray-400">
           Hi, welcome and nice to meet you.
