@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-    <body className={`${inter.variable} ${spaceMono.variable} ${playfair.variable}`}>
+    <body suppressHydrationWarning className={`${inter.variable} ${spaceMono.variable} ${playfair.variable}`}>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"

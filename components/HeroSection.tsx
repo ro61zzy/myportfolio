@@ -66,7 +66,25 @@ export default function HeroSection() {
         <p className="mt-6 max-w-lg text-gray-500">
           I craft end-to-end solutions that users love and businesses thrive on.
         </p>
+
+        <div className="mt-8 flex flex-wrap gap-4">
+  <a
+    href="#Projects"
+    className="px-6 py-3 rounded-full bg-green-400 text-black font-medium hover:bg-green-500 transition"
+  >
+    View My Work
+  </a>
+  <a
+    href="#ContactMe"
+    className="px-6 py-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 font-medium hover:bg-green-400 hover:text-black transition"
+  >
+    Contact Me
+  </a>
+</div>
+
       </div>
+
+      
 
       {/* Tarantula profile photo */}
       <div className="flex-1 hidden md:flex items-center justify-center ">
