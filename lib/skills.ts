@@ -103,7 +103,7 @@ export const skills = [
   },
   {
     name: "Linear",
-    iconUrl: "https://placehold.co/32x32/141414/FFFFFF?text=L",
+    iconUrl: "/icons/linear.png",
   },
   {
     name: "Git",

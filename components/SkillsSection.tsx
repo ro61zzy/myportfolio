@@ -15,7 +15,6 @@ declare global {
   }
 }
 
-
 export default function Skills() {
   const [gsapLoaded, setGsapLoaded] = useState(false);
 
@@ -60,9 +59,12 @@ export default function Skills() {
   }, [gsapLoaded]);
 
   return (
-    <section id="skills" className="py-20 px-2 text-white font-sans overflow-hidden">
-      <div className="container mx-auto ">
-        <h2 className="text-4xl sm:text-5xl font-playfair text-gray-400 ">
+    <section
+      id="skills"
+       className="relative py-20 px-4 md:px-12"
+    >
+      <div className="">
+        <h2 className="text-4xl sm:text-5xl font-playfair ">
           My Skills
         </h2>
       </div>
