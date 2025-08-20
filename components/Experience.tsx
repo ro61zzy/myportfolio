@@ -34,7 +34,7 @@ export default function Experiences() {
   }, []);
 
   return (
-    <section id="experience" className="relative py-20 px-4 md:px-12">
+    <section id="Experience" className="relative py-20 px-4 md:px-12">
       <h2 className="text-4xl sm:text-5xl font-playfair mb-14">Experience</h2>
 
       <div className="space-y-14">
@@ -50,7 +50,7 @@ export default function Experiences() {
               <h3 className="text-xl font-bold mt-2">
                 {el.role} <span className="text-green-400">@ {el.company}</span>
               </h3>
-              <p className="text-sm italic text-gray-500">{el.location}</p>
+              {/* <p className="text-sm italic text-gray-500">{el.location}</p> */}
             </div>
 
             <div>

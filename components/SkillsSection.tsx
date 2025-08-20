@@ -60,7 +60,7 @@ export default function Skills() {
 
   return (
     <section
-      id="skills"
+      id="Skills"
        className="relative py-20 px-4 md:px-12"
     >
       <div className="">
