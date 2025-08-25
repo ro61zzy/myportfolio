@@ -18,19 +18,19 @@ export default function Projects() {
       ? projects
       : projects.filter((p) => p.tag === activeTab);
 
-  useEffect(() => {
-    gsap.from(".project-card", {
-      scrollTrigger: {
-        trigger: "#projects",
-        start: "top 80%",
-      },
-      opacity: 0,
-      y: 40,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: "power3.out",
-    });
-  }, [activeTab]);
+  // useEffect(() => {
+  //   gsap.from(".project-card", {
+  //     scrollTrigger: {
+  //       trigger: "#projects",
+  //       start: "top 80%",
+  //     },
+  //     opacity: 0,
+  //     y: 40,
+  //     duration: 0.6,
+  //     stagger: 0.1,
+  //     ease: "power3.out",
+  //   });
+  // }, [activeTab]);
 
   return (
     <section id="Projects" className="py-20 px-4 md:px-12">
@@ -53,22 +53,22 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* Project Grid */}
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((p, i) => (
           <div
             key={i}
             className="project-card bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
           >
-            {/* Image with Overlay */}
+     
             <div className="relative group overflow-hidden">
               <img
                 src={p.image}
                 alt={p.name}
-                className="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-50 object-fit transform transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* Overlay with icons */}
+
               <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {p.github && (
                   <a
@@ -93,14 +93,14 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Content */}
+
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{p.name}</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                 {p.description}
               </p>
 
-              {/* Skills */}
+           
               <div className="flex flex-wrap gap-2 mb-2">
                 {p.skills.map((skill, k) => (
                   <span
