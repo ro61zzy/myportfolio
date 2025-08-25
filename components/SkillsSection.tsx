@@ -1,17 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
 import { skills } from "@/lib/skills";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 declare global {
   interface Window {
-    gsap: any;
-    ScrollTrigger: any;
+    gsap?: typeof gsap;
+    ScrollTrigger?: typeof ScrollTrigger;
   }
 }
 
@@ -19,7 +19,6 @@ export default function Skills() {
   const [gsapLoaded, setGsapLoaded] = useState(false);
 
   useEffect(() => {
-    // Load GSAP and ScrollTrigger from CDN
     const loadScripts = () => {
       if (!window.gsap) {
         const script1 = document.createElement("script");
@@ -43,11 +42,11 @@ export default function Skills() {
 
   useEffect(() => {
     if (gsapLoaded) {
-      window.gsap.registerPlugin(window.ScrollTrigger);
-      window.gsap.from(".skill-item", {
+      window.gsap?.registerPlugin(window.ScrollTrigger!);
+      window.gsap?.from(".skill-item", {
         scrollTrigger: {
-          trigger: "#skills",
-          start: "top 80%", // when 80% of section enters viewport
+          trigger: "#Skills",
+          start: "top 80%",
         },
         opacity: 0,
         y: 40,
@@ -59,30 +58,30 @@ export default function Skills() {
   }, [gsapLoaded]);
 
   return (
-    <section
-      id="Skills"
-       className="relative py-20 px-4 md:px-12"
-    >
-      <div className="">
-        <h2 className="text-4xl sm:text-5xl font-playfair ">
-          My Skills
-        </h2>
+    <section id="Skills" className="relative py-20 px-4 md:px-12">
+      <div>
+        <h2 className="text-4xl sm:text-5xl font-playfair">My Skills</h2>
       </div>
 
-      <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4 mt-8">
         {skills.map((skill, index) => (
           <div
             key={`skill-${index}`}
-            className="skill-item inline-flex items-center space-x-2 
+            className="skill-item inline-flex items-center 
              bg-gray-100 dark:bg-gray-800 
              text-gray-800 dark:text-white 
              rounded-md px-4 py-2 border 
              border-gray-300 dark:border-gray-700 
              shadow-md transition-transform duration-300 
-             hover:scale-110 cursor-pointer justify-center
-             gap-2"
+             hover:scale-110 cursor-pointer justify-center gap-2"
           >
-            <img src={skill.iconUrl} alt={skill.name} className="w-8 h-7" />
+            <Image
+              src={skill.iconUrl}
+              alt={skill.name}
+              width={32}
+              height={28}
+              className="w-8 h-7"
+            />
             <span className="text-sm font-semibold">{skill.name}</span>
           </div>
         ))}

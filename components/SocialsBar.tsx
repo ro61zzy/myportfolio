@@ -1,5 +1,5 @@
 "use client";
-import { Github, Linkedin, Twitter } from "lucide-react"; // or icons of choice
+import { Github, Linkedin} from "lucide-react"; // or icons of choice
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 

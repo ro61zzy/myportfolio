@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "@/lib/projects";
 import { Github, Link as ExternalLink } from "lucide-react";
+import Image from "next/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,11 +64,14 @@ export default function Projects() {
           >
      
             <div className="relative group overflow-hidden">
-              <img
-                src={p.image}
-                alt={p.name}
-                className="w-full h-50 object-fit transform transition-transform duration-500 group-hover:scale-110"
-              />
+             <Image
+    src={p.image}
+    alt={p.name}
+    width={500}   
+    height={300} 
+    className="w-full h-50 object-cover transform transition-transform duration-500 group-hover:scale-110"
+  />
+
 
 
               <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

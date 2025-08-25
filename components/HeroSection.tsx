@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import Image from "next/image";
+
 
 gsap.registerPlugin(TextPlugin);
 
@@ -86,13 +88,15 @@ export default function HeroSection() {
 
       
 
-      {/* Tarantula profile photo */}
       <div className="flex-1 hidden md:flex items-center justify-center ">
-     <img
+  <Image
   src="/taran.png"
   alt="Ms. Tarantula as a hero image"
+  width={500}  
+  height={500}
   className="w-full max-w-xl object-contain"
 />
+
 
       </div>
     </section>
