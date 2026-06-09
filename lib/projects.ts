@@ -1,12 +1,22 @@
 export const projects = [
     {
-    name: "Tokens Dashboard",
+    name: "Web3 File Sharing",
     tag: "web3",
     image: "/projects/web3sharing.png",
     description: "A simple dashboard for different top tokens",
     skills: ["Next.js", "TypeScript", "ethers.js","Sepolia"],
       live: "https://web3-file-sharing.vercel.app/",
     github: "https://github.com/ro61zzy/web3_file_sharing",
+
+  },
+  {
+    name: "Investment Dashboard",
+    tag: "web",
+    image: "/projects/investdash.png",
+    description: "A simple dashboard for different investments",
+    skills: ["Next.js", "TypeScript", "Recharts", "Tailwind"],
+      live: "https://invest-dash-web.vercel.app/",
+    github: "https://github.com/ro61zzy/invest_dash",
 
   },
    {
