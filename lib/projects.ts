@@ -46,8 +46,8 @@ export const projects = [
     image: "/projects/tdashboard.png",
     description: "A simple dashboard for different top tokens",
     skills: ["Coingecko", "Web3", "Chart.js"],
-      live: "https://yourportfolio.com",
-    github: "https://github.com/yourusername/portfolio",
+      live: "https://defi-dash-rho.vercel.app/",
+    github: "https://github.com/ro61zzy/defi_dash",
 
   },
   {
