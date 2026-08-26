@@ -20,6 +20,16 @@ export const projects = [
 
   },
    {
+    name: "Weather Intelligence",
+    tag: "mobile",
+    image: "/projects/ambicast.png",
+    description: "modern weather intelligence mobile application",
+    skills: ["Expo", "React Native", "TypeScript", "Zustand",],
+      live: "https://github.com/ro61zzy/ambicast/releases/tag/v1.0.0",
+    github: "https://github.com/ro61zzy/ambicast",
+
+  },
+  {
     name: "Support Hub",
     tag: "web",
     image: "/projects/supporthub.png",
@@ -29,24 +39,24 @@ export const projects = [
     github: "https://github.com/ro61zzy/support_hub/tree/main/client_dispute_system",
 
   },
-    {
+  {
     name: "NFT SEA",
     tag: "web3",
     image: "/projects/nftsea.png",
     description: "Allows mint ERC-721 NFTs",
     skills: ["TypeScript", "TailwindCSS", "Wagmi"],
-      live: "https://nft-sea-eta.vercel.app/",
+    live: "https://nft-sea-eta.vercel.app/",
     github: "https://github.com/ro61zzy/nft_sea",
 
   },
 
-     {
+  {
     name: "Tech Company Website",
     tag: "web",
     image: "/projects/techc.png",
     description: "A tech company's simple website design",
     skills: ["Javascript", "CSS", "HTML"],
-      live: "https://techist.netlify.app/",
+    live: "https://techist.netlify.app/",
     github: "https://github.com/ro61zzy/Techist",
 
   },
